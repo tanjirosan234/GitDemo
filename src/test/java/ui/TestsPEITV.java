@@ -59,7 +59,7 @@ public class TestsPEITV {
 	/**************************************************************************
 	  Test for starting logging page
 	 **************************************************************************/
-	@Test(priority=1, enabled=false)
+	@Test(priority=1, enabled=true)
 	public void StartLoginTest() {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		//Select Login link
@@ -91,7 +91,7 @@ public class TestsPEITV {
 	/**************************************************************************
 	Test for checking login with empty user and password
 	***************************************************************************/
-	@Test(priority=2, enabled=false)
+	@Test(priority=2, enabled=true)
 	public void EmptyLoginTest() {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 			
@@ -114,7 +114,7 @@ public class TestsPEITV {
 	/**************************************************************************
 	//Test for checking login with wrong user and password
 	 **************************************************************************/
-	@Test(priority=3, enabled=false)
+	@Test(priority=3, enabled=true)
 	public void WrongLoginTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 
@@ -138,7 +138,7 @@ public class TestsPEITV {
 	/**************************************************************************
 	//Test for checking successful login with correct user and password
 	**************************************************************************/
-	@Test(priority=4, enabled=false)
+	@Test(priority=4, enabled=true)
 	public void SuccessfulLoginTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		
@@ -165,7 +165,7 @@ public class TestsPEITV {
 	/**************************************************************************
 	//Test for checking My Account
 	**************************************************************************/
-	@Test(priority=5, enabled=false)
+	@Test(priority=5, enabled=true)
 	public void MyAccountTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		//Refresh the login page 
@@ -183,7 +183,7 @@ public class TestsPEITV {
 	/**************************************************************************
 	//Test for checking Log out
 	**************************************************************************/
-	@Test(priority=6, enabled=false)
+	@Test(priority=6, enabled=true)
 	public void LogoutTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		
@@ -248,7 +248,7 @@ public class TestsPEITV {
 	/**************************************************************************
 	//Test for checking start Forgot Password Test
 	**************************************************************************/
-	@Test(priority=11, enabled=false)
+	@Test(priority=11, enabled=true)
 	public void StartForgotPasswordTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		
@@ -268,7 +268,7 @@ public class TestsPEITV {
 	/**************************************************************************
 	//Test for checking sending empty mail
 	**************************************************************************/	
-	@Test(priority=12, enabled=false)
+	@Test(priority=12, enabled=true)
 	public void EmptyMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -289,7 +289,7 @@ public class TestsPEITV {
 	/**************************************************************************
 	//Test for checking sending wrong format of mail
 	**************************************************************************/	
-	@Test(priority=13, enabled=false)
+	@Test(priority=13, enabled=true)
 	public void WrongFormatMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -310,7 +310,7 @@ public class TestsPEITV {
 	/**************************************************************************
 	//Test for checking sending not existing of mail
 	**************************************************************************/
-	@Test(priority=14, enabled=false)
+	@Test(priority=14, enabled=true)
 	public void NotExistingMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -335,7 +335,7 @@ public class TestsPEITV {
 	/**************************************************************************
 	//Test for checking Cancel button
 	**************************************************************************/
-	@Test(priority=15, enabled=false)
+	@Test(priority=15, enabled=true)
 	public void CancelButtonTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
