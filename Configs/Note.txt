@@ -1,0 +1,36 @@
+--- Cariflix - OK
+--- Eduflix - OK
+--- Panam - OK
+Teletica (TDMAX) - OK (samo test Cancel Subscribe ne raboti)
+TourTok - OK
+TvTel (CDO+) - OK
+VivaMax - OK (otkazana e VivaMax - obsolete)
+WIPR - OK (Celosno prepraven mu falat ID na labelite)
+Swarmio - OK
+SVG - OK -> (isfrlen login)
+PEITV - OK -> Falat ID za registration
+RidersTV - OK -> (isfrlen)
+Hekaya(Arab Telemedia) - OK
+Hadif - OK do Subscription (nov dizajn kje ima)
+--- HERFLIX - OK
+--- Titan - OK
+--- ThreeCommas - OK
+--- Kuarzo - OK
+--- FamilyPlay - OK
+--- AmericanoMedia - OK
+Talking Wealth - OK
+--- LEN - samo pocnata (nema ID skoro za nisto)
+
+
+NANOVO
+Panam - OK
+Herflix - OK
+Cariflix - OK (Registration -> Login -> Forgot password)
+LEN TV - OK
+Eduflix - OK
+Titan - OK
+AmericanoMedia - OK
+Kuarzo - OK
+FamilyPlay - OK (ima BUG za Future date)
+ThreeCommas - OK
+
