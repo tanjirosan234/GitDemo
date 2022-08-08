@@ -1,5 +1,7 @@
 package ui;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Iterator;
@@ -106,7 +108,7 @@ public class TestsPanam {
 		driver.findElement(By.id("autotest-login-button")).click();
 			
 		//Check message that need user to be entered
-		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
 	}
 	
 	/**************************************************************************
@@ -129,7 +131,7 @@ public class TestsPanam {
 		driver.findElement(By.id("autotest-login-button")).click();
 			
 		//Check message that need password to be entered
-		Assert.assertTrue(driver.findElement(By.id("auto_pass_required")).getText().contains(configFileReader.getFieldRequiredText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto_pass_required")).getText().contains(configFileReader.getFieldRequiredText()));
 	}
 	
 	/**************************************************************************
@@ -152,9 +154,9 @@ public class TestsPanam {
 		driver.findElement(By.id("autotest-login-button")).click();
 			
 		//Check message that need user to be entered
-		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
 		//Check message that need password to be entered
-		Assert.assertTrue(driver.findElement(By.id("auto_pass_required")).getText().contains(configFileReader.getFieldRequiredText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto_pass_required")).getText().contains(configFileReader.getFieldRequiredText()));
 	}
 	
 	/**************************************************************************
@@ -178,7 +180,7 @@ public class TestsPanam {
 		
 		Thread.sleep(configFileReader.getSleepTime());
 		//Check message that informs wrong user/pass are entered
-		Assert.assertTrue(driver.findElement(By.id("autotest-login-usernotfound")).getText().contains(configFileReader.getIncorrectUserPassMsgText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("autotest-login-usernotfound")).getText().contains(configFileReader.getIncorrectUserPassMsgText()));
 	}
 	
 	/**************************************************************************
@@ -202,7 +204,7 @@ public class TestsPanam {
 		
 		Thread.sleep(configFileReader.getSleepTime());
 		//Check message that informs wrong user/pass are entered
-		Assert.assertTrue(driver.findElement(By.id("autotest-login-usernotfound")).getText().contains(configFileReader.getIncorrectUserPassMsgText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("autotest-login-usernotfound")).getText().contains(configFileReader.getIncorrectUserPassMsgText()));
 	}
 	
 	/**************************************************************************
@@ -226,7 +228,7 @@ public class TestsPanam {
 		
 		Thread.sleep(configFileReader.getSleepTime());
 		//Check message that informs wrong user/pass are entered
-		Assert.assertTrue(driver.findElement(By.id("autotest-login-usernotfound")).getText().contains(configFileReader.getIncorrectUserPassMsgText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("autotest-login-usernotfound")).getText().contains(configFileReader.getIncorrectUserPassMsgText()));
 	}
 	
 	/**************************************************************************
@@ -252,7 +254,7 @@ public class TestsPanam {
 
 		//Check is logged?
 		driver.findElement(By.id("auto-login-avatar-face")).click();
-		Assert.assertTrue(driver.findElement(By.id("auto-login-logout")).getText().contains(configFileReader.getLogoutText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto-login-logout")).getText().contains(configFileReader.getLogoutText()));
 
 	}
 	
@@ -271,7 +273,7 @@ public class TestsPanam {
 		
 		//Check Account name
 		Thread.sleep(configFileReader.getSleepTime());
-		Assert.assertTrue(driver.findElement(By.id("auto-test-membership")).getText().contains(configFileReader.getCorrectUserText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto-test-membership")).getText().contains(configFileReader.getCorrectUserText()));
 	}
 	
 	/**************************************************************************
@@ -287,7 +289,7 @@ public class TestsPanam {
 		
 		//Check is logged?
 		WebElement loginMenu = driver.findElement(By.id("auto-btn-login"));
-		Assert.assertEquals(loginMenu.findElement(By.tagName("a")).getText(), configFileReader.getLoginTitleText());
+		AssertJUnit.assertEquals(loginMenu.findElement(By.tagName("a")).getText(), configFileReader.getLoginTitleText());
 	}	
 
 	/**************************************************************************
@@ -416,7 +418,7 @@ public class TestsPanam {
 		driver.findElement(By.id("auto-test-send")).click();
 			
 		//Check message for empty mail
-		Assert.assertEquals(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText(), configFileReader.getFieldRequiredText());
+		AssertJUnit.assertEquals(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText(), configFileReader.getFieldRequiredText());
 	
 	}
 		
@@ -437,7 +439,7 @@ public class TestsPanam {
 		driver.findElement(By.id("auto-test-send")).click();
 			
 		//Check message for empty mail
-		Assert.assertEquals(driver.findElement(By.id("auto-customInput-fieldRequired2")).getText(), configFileReader.getNotValidMailText());
+		AssertJUnit.assertEquals(driver.findElement(By.id("auto-customInput-fieldRequired2")).getText(), configFileReader.getNotValidMailText());
 	
 	}
 	
@@ -462,7 +464,7 @@ public class TestsPanam {
 			
 		Thread.sleep(configFileReader.getSleepTime());
 		//Check message for not existed mail
-		Assert.assertEquals(driver.findElement(By.id("auto-test-forgotpass1")).getText(), configFileReader.getIncorrectMailMsgText());
+		AssertJUnit.assertEquals(driver.findElement(By.id("auto-test-forgotpass1")).getText(), configFileReader.getIncorrectMailMsgText());
 	
 	}
 
@@ -553,21 +555,21 @@ public class TestsPanam {
 		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
 
 		//Check message for First Name
-		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
 		//Check message for Last Name
-		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
 		//Check message for Country
-		Assert.assertTrue(driver.findElement(By.id("auto_country_field")).getText().contains(configFileReader.getFieldRequiredText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto_country_field")).getText().contains(configFileReader.getFieldRequiredText()));
 		//Check message for Email
-		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
 		//Check message for First Name
-		Assert.assertTrue(driver.findElement(By.id("autotest-password-required")).getText().contains(configFileReader.getFieldRequiredText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("autotest-password-required")).getText().contains(configFileReader.getFieldRequiredText()));
 		//Check message for First Name
-		Assert.assertTrue(driver.findElement(By.id("autotest-confirmPassword")).getText().contains(configFileReader.getFieldRequiredText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("autotest-confirmPassword")).getText().contains(configFileReader.getFieldRequiredText()));
 		//Check message for Birth Date
-		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
 		//Check message for Accept Terms and Privacy Check Box
-		Assert.assertTrue(driver.findElement(By.id("autotest-checktheBox")).getText().contains(configFileReader.getFieldCheckBoxText()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("autotest-checktheBox")).getText().contains(configFileReader.getFieldCheckBoxText()));
 				
 	}
 	
@@ -588,7 +590,7 @@ public class TestsPanam {
 		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getBadFormatedMailText());
 
 		//Check message for Email
-		Assert.assertTrue(elemEmail.findElement(By.id("auto-customInput-fieldRequired2")).getText().contains(configFileReader.getNotValidMailText()));
+		AssertJUnit.assertTrue(elemEmail.findElement(By.id("auto-customInput-fieldRequired2")).getText().contains(configFileReader.getNotValidMailText()));
 		
 	}
 	
@@ -607,7 +609,7 @@ public class TestsPanam {
 		
 		//Check message for Password
 		System.out.println(driver.findElement(By.id("shortPassword-autotest")).getText());
-		Assert.assertTrue(driver.findElement(By.id("shortPassword-autotest")).getText().contains(configFileReader.getShortPassMsg()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("shortPassword-autotest")).getText().contains(configFileReader.getShortPassMsg()));
 		
 	}
 	
@@ -623,7 +625,7 @@ public class TestsPanam {
 		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getShortPass());	
 
 		//Check message for Confirm Password
-		Assert.assertTrue(driver.findElement(By.id("shortPassword-autotest")).getText().contains(configFileReader.getShortPassMsg()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("shortPassword-autotest")).getText().contains(configFileReader.getShortPassMsg()));
 
 	}
 	
@@ -643,7 +645,7 @@ public class TestsPanam {
 		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getWrongPassText());	
 
 		//Check message for Confirm Password
-		Assert.assertTrue(driver.findElement(By.id("PasswordNotMatch-autotest")).getText().contains(configFileReader.getPassNotMatchedMsg()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("PasswordNotMatch-autotest")).getText().contains(configFileReader.getPassNotMatchedMsg()));
 
 	}
 	
@@ -718,7 +720,7 @@ public class TestsPanam {
 		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());
 		//Click on Register button
 		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
-		Assert.assertTrue(driver.findElement(By.id("auto_date_invalid")).getText().contains(configFileReader.getDateNotValid()));
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto_date_invalid")).getText().contains(configFileReader.getDateNotValid()));
 
 	}
 	
