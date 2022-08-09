@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>26/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Aug 05 16:07:40 CEST 2022</td>
+<td>Started on:</td><td>Tue Aug 09 11:22:59 CEST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>48 seconds (48760 ms)</td>
+<tr><td>Total time:</td><td>72 seconds (72416 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,126 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='ui.TestsPEITV.CheckSubscribeFieldsTest()'><b>CheckSubscribeFieldsTest</b><br>Test class: ui.TestsPEITV</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#auto_firstName&quot;}
-  (Session info: chrome=104.0.5112.79)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Ljupcos-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:1c9c:1fc4:c1b8:2402%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;13.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /var/folders/5q/b40p0g4154l...}, goog:chromeOptions: {debuggerAddress: localhost:54327}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 76d9540d71347138df5f5632f04ab393
-*** Element info: {Using=id, value=auto_firstName}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at ui.TestsPEITV.CheckSubscribeFieldsTest(TestsPEITV.java:407)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace386201215", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace386201215'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#auto_firstName&quot;}
-  (Session info: chrome=104.0.5112.79)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Ljupcos-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:1c9c:1fc4:c1b8:2402%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;13.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /var/folders/5q/b40p0g4154l...}, goog:chromeOptions: {debuggerAddress: localhost:54327}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 76d9540d71347138df5f5632f04ab393
-*** Element info: {Using=id, value=auto_firstName}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at ui.TestsPEITV.CheckSubscribeFieldsTest(TestsPEITV.java:407)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>10</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -195,75 +75,135 @@ Session ID: 76d9540d71347138df5f5632f04ab393
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='ui.TestsPEITV.MyAccountTest()'><b>MyAccountTest</b><br>Test class: ui.TestsPEITV</td>
+<td title='ui.TestsHekaya.InitialSubscribeTest()'><b>InitialSubscribeTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.WrongFormatMailTest()'><b>WrongFormatMailTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.NotExistingMailTest()'><b>NotExistingMailTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>3</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.StartForgotPasswordTest()'><b>StartForgotPasswordTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.ChangeLanguageToEnglishTest()'><b>ChangeLanguageToEnglishTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.WrongLoginTest()'><b>WrongLoginTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>3</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.SubscribeShortConfirmPasswordTest()'><b>SubscribeShortConfirmPasswordTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.SuccessfulLoginTest()'><b>SuccessfulLoginTest</b><br>Test class: ui.TestsHekaya</td>
 <td></td>
 <td>4</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
+<td>ui.TestsHekaya@20d28811</td></tr>
 <tr>
-<td title='ui.TestsPEITV.SuccessfulLoginTest()'><b>SuccessfulLoginTest</b><br>Test class: ui.TestsPEITV</td>
-<td></td>
-<td>2</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
-<tr>
-<td title='ui.TestsPEITV.WrongFormatMailTest()'><b>WrongFormatMailTest</b><br>Test class: ui.TestsPEITV</td>
+<td title='ui.TestsHekaya.EmptyLoginTest()'><b>EmptyLoginTest</b><br>Test class: ui.TestsHekaya</td>
 <td></td>
 <td>0</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
+<td>ui.TestsHekaya@20d28811</td></tr>
 <tr>
-<td title='ui.TestsPEITV.InitialSubscribeTest()'><b>InitialSubscribeTest</b><br>Test class: ui.TestsPEITV</td>
+<td title='ui.TestsHekaya.SubscribeNotMatchedPasswordTest()'><b>SubscribeNotMatchedPasswordTest</b><br>Test class: ui.TestsHekaya</td>
 <td></td>
 <td>0</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
+<td>ui.TestsHekaya@20d28811</td></tr>
 <tr>
-<td title='ui.TestsPEITV.EmptyLoginTest()'><b>EmptyLoginTest</b><br>Test class: ui.TestsPEITV</td>
-<td></td>
-<td>0</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
-<tr>
-<td title='ui.TestsPEITV.SubscribeButtonTest()'><b>SubscribeButtonTest</b><br>Test class: ui.TestsPEITV</td>
-<td></td>
-<td>0</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
-<tr>
-<td title='ui.TestsPEITV.StartLoginTest()'><b>StartLoginTest</b><br>Test class: ui.TestsPEITV</td>
+<td title='ui.TestsHekaya.CheckSubscribeFieldsTest()'><b>CheckSubscribeFieldsTest</b><br>Test class: ui.TestsHekaya</td>
 <td></td>
 <td>1</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
+<td>ui.TestsHekaya@20d28811</td></tr>
 <tr>
-<td title='ui.TestsPEITV.LogoutTest()'><b>LogoutTest</b><br>Test class: ui.TestsPEITV</td>
+<td title='ui.TestsHekaya.SubscribeEnterCountryTest()'><b>SubscribeEnterCountryTest</b><br>Test class: ui.TestsHekaya</td>
 <td></td>
 <td>0</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
+<td>ui.TestsHekaya@20d28811</td></tr>
 <tr>
-<td title='ui.TestsPEITV.WrongLoginTest()'><b>WrongLoginTest</b><br>Test class: ui.TestsPEITV</td>
-<td></td>
-<td>4</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
-<tr>
-<td title='ui.TestsPEITV.NotExistingMailTest()'><b>NotExistingMailTest</b><br>Test class: ui.TestsPEITV</td>
-<td></td>
-<td>3</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
-<tr>
-<td title='ui.TestsPEITV.SubscribeCancelTest()'><b>SubscribeCancelTest</b><br>Test class: ui.TestsPEITV</td>
-<td></td>
-<td>3</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
-<tr>
-<td title='ui.TestsPEITV.CancelButtonTest()'><b>CancelButtonTest</b><br>Test class: ui.TestsPEITV</td>
+<td title='ui.TestsHekaya.StartLoginTest()'><b>StartLoginTest</b><br>Test class: ui.TestsHekaya</td>
 <td></td>
 <td>0</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
+<td>ui.TestsHekaya@20d28811</td></tr>
 <tr>
-<td title='ui.TestsPEITV.EmptyMailTest()'><b>EmptyMailTest</b><br>Test class: ui.TestsPEITV</td>
+<td title='ui.TestsHekaya.SubscribeEmptyFieldsTest()'><b>SubscribeEmptyFieldsTest</b><br>Test class: ui.TestsHekaya</td>
 <td></td>
 <td>0</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
+<td>ui.TestsHekaya@20d28811</td></tr>
 <tr>
-<td title='ui.TestsPEITV.StartForgotPasswordTest()'><b>StartForgotPasswordTest</b><br>Test class: ui.TestsPEITV</td>
+<td title='ui.TestsHekaya.SubscribeShortPasswordTest()'><b>SubscribeShortPasswordTest</b><br>Test class: ui.TestsHekaya</td>
 <td></td>
 <td>0</td>
-<td>ui.TestsPEITV@794cb805</td></tr>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.SubscribeSelectTermsPrivacyCheckBoxTest()'><b>SubscribeSelectTermsPrivacyCheckBoxTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.SubscribeBadFormatedMailTest()'><b>SubscribeBadFormatedMailTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.SubscribeCreateNewUserTest()'><b>SubscribeCreateNewUserTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>2</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.EmptyMailTest()'><b>EmptyMailTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.SubscribeFutureDateTest()'><b>SubscribeFutureDateTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.MyAccountTest()'><b>MyAccountTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>5</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.CancelButtonTest()'><b>CancelButtonTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.LogoutTest()'><b>LogoutTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.SubscribeExistedUserTest()'><b>SubscribeExistedUserTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>6</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.SubscribeEnterFirstNameTest()'><b>SubscribeEnterFirstNameTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
+<tr>
+<td title='ui.TestsHekaya.SubscribeEnterLastNameTest()'><b>SubscribeEnterLastNameTest</b><br>Test class: ui.TestsHekaya</td>
+<td></td>
+<td>0</td>
+<td>ui.TestsHekaya@20d28811</td></tr>
 </table><p>
 </body>
 </html>

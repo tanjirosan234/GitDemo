@@ -10,7 +10,7 @@ Swarmio - OK
 SVG - OK -> (isfrlen login)
 PEITV - OK -> Falat ID za registration
 RidersTV - OK -> (isfrlen)
-Hekaya(Arab Telemedia) - OK
+--- Hekaya(Arab Telemedia) - OK
 Hadif - OK do Subscription (nov dizajn kje ima)
 --- HERFLIX - OK
 --- Titan - OK
@@ -33,4 +33,4 @@ AmericanoMedia - OK
 Kuarzo - OK
 FamilyPlay - OK (ima BUG za Future date)
 ThreeCommas - OK
-
+Hekaya(Arab Telemedia) - OK
