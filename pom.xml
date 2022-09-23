@@ -86,7 +86,7 @@
           	<include>Firstmavenclass.java</include>
           	</includes>
           	<suiteXmlFiles>
-          	<suiteXmlFile>testng.xml</suiteXmlFile>
+          	<suiteXmlFile>testng_Panam.xml</suiteXmlFile>
           	</suiteXmlFiles>
           	</configuration>
 		</plugin>
