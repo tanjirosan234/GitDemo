@@ -42,8 +42,6 @@ public class TestsPanam {
 			driver = new ChromeDriver();
 			driver.get(configFileReader.getApplicationUrl());
 			driver.manage().window().maximize();
-			driver.addArguments("--headless");
-			driver.manage()
 		}
 		if (browserId.contains("edge")) {
 			WebDriverManager.edgedriver().setup();
