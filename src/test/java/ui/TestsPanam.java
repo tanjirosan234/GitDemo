@@ -36,10 +36,14 @@ public class TestsPanam {
 
 		if (browserId.contains("chrome")) {
 			WebDriverManager.chromedriver().setup();
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.addArguments("--headless");
+			ChromeDriver driver = new ChromeDriver(chromeOptions);
 			driver = new ChromeDriver();
 			driver.get(configFileReader.getApplicationUrl());
 			driver.manage().window().maximize();
 			driver.addArguments("--headless");
+			driver.manage()
 		}
 		if (browserId.contains("edge")) {
 			WebDriverManager.edgedriver().setup();
