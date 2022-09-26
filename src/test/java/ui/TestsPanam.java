@@ -38,8 +38,8 @@ public class TestsPanam {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--headless");
-			ChromeDriver driver = new ChromeDriver(chromeOptions);
-			driver = new ChromeDriver();
+			ChromeDriver driverNew = new ChromeDriver(chromeOptions);
+			driverNew = new ChromeDriver();
 			driver.get(configFileReader.getApplicationUrl());
 			driver.manage().window().maximize();
 		}
