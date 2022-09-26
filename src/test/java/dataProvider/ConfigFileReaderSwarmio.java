@@ -192,4 +192,54 @@ public class ConfigFileReaderSwarmio {
 				else throw new RuntimeException("passwordFB not specified in the Configuration.properties file.");
 			}
 			
+			////////New properties
+			
+			public String getFieldCheckBoxText() {
+				String fieldRequiredCheckBox = propertiesSwarmio.getProperty("fieldRequiredCheckBox");
+				if (fieldRequiredCheckBox != null)
+					return fieldRequiredCheckBox;
+				else
+					throw new RuntimeException("fieldRequiredCheckBox not specified in the Configuration.properties file.");
+			}
+		
+			public String getFirstName() {
+				String firstName = propertiesSwarmio.getProperty("firstName");
+				if (firstName != null)
+					return firstName;
+				else
+					throw new RuntimeException("firstName not specified in the Configuration.properties file.");
+			}
+		
+			public String getLastName() {
+				String lastName = propertiesSwarmio.getProperty("lastName");
+				if (lastName != null)
+					return lastName;
+				else
+					throw new RuntimeException("lastName not specified in the Configuration.properties file.");
+			}
+		
+			public String getCorrectDate() {
+				String correctDate = propertiesSwarmio.getProperty("correctDate");
+				if (correctDate != null)
+					return correctDate;
+				else
+					throw new RuntimeException("correctDate not specified in the Configuration.properties file.");
+			}
+		
+			public String getFutureDate() {
+				String futureDate = propertiesSwarmio.getProperty("futureDate");
+				if (futureDate != null)
+					return futureDate;
+				else
+					throw new RuntimeException("futureDate not specified in the Configuration.properties file.");
+			}
+		
+			public String getDateNotValid() {
+				String dateNotValid = propertiesSwarmio.getProperty("dateNotValid");
+				if (dateNotValid != null)
+					return dateNotValid;
+				else
+					throw new RuntimeException("dateNotValid not specified in the Configuration.properties file.");
+			}
+			
 }

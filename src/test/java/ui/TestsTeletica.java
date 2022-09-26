@@ -13,7 +13,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -62,6 +64,8 @@ public class TestsTeletica {
 	@Test(priority=1, enabled=true)
 	public void StartLoginTest() {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+		driver.navigate().refresh();
+		
 		//Select Login link
 		driver.findElement(By.id("auto-btn-login")).click();
 		//Check is the user field available
@@ -401,37 +405,69 @@ public class TestsTeletica {
 	
 	}
 	
+	/**************************************************************************
+	//Test for check all fields in subscribe page
+	**************************************************************************/
+	@Test(priority=23, enabled=true)
+	public void CheckSubscribeFieldsTest() throws InterruptedException {
+		
+		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+
+		//Check Email
+		driver.findElement(By.id("auto-subscription-email"));
+		//Check Confirm Email
+		driver.findElement(By.id("auto-subscription-confirmEmail"));
+		//Check Password
+		driver.findElement(By.id("auto-subscription-password"));
+		//Check Confirm password
+		driver.findElement(By.id("auto-subscription-confirmpassword"));
+		//Check Birth Date
+		driver.findElement(By.id("auto_birthDate"));		
+		//Check Country
+		driver.findElement(By.id("cars"));
+		//Check Male Gender check box
+		driver.findElement(By.id("autotest-male-Teletica"));
+		//Check Female Gender check box
+		driver.findElement(By.id("autotest-female-Teletica"));
+
+		//Check Register button
+		driver.findElement(By.id("auto-continue-btn"));
+				
+				
+	}
 	
 	
 	/**************************************************************************
 	//Test for subscribe all empty fields
 	**************************************************************************/
-	@Test(priority=23, enabled=true)
+	@Test(priority=24, enabled=true)
 	public void SubscribeEmptyFieldsTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		driver.navigate().refresh();	
 		//Click on Continue button
 		driver.findElement(By.id("auto-continue-btn")).click();
-		Thread.sleep(3000);
 		
 		List<WebElement> elementsFieldRequired = driver.findElements(By.id("auto-customInput-fieldRequired1"));
 		//Check message for Email
 		Assert.assertEquals(elementsFieldRequired.get(0).getText(), configFileReader.getFieldRequiredText());
 		//Check message for Confirm Email
 		Assert.assertEquals(elementsFieldRequired.get(1).getText(), configFileReader.getFieldRequiredText());
-		//Check message for Password
+		//Check message for Date
 		Assert.assertEquals(elementsFieldRequired.get(2).getText(), configFileReader.getFieldRequiredText());
-		//Check message for Confirm Password
-		Assert.assertEquals(elementsFieldRequired.get(3).getText(), configFileReader.getFieldRequiredText());
-		
+		//Check message for Password
+		Assert.assertEquals(driver.findElement(By.id("autotest-password-required")).getText(), configFileReader.getFieldRequiredText());
+		//Check message for Email
+		Assert.assertEquals(driver.findElement(By.id("autotest-confirmPassword")).getText(), configFileReader.getFieldRequiredText());
+		//Check message for Email
+		Assert.assertEquals(driver.findElement(By.id("auto-required_country")).getText(), configFileReader.getFieldRequiredText());
 	}
 	
 	
 	/**************************************************************************
 	//Test for subscribe bad formated mail
 	**************************************************************************/
-	@Test(priority=24, enabled=true)
+	@Test(priority=25, enabled=true)
 	public void SubscribeBadFormatedMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -463,7 +499,7 @@ public class TestsTeletica {
 	/**************************************************************************
 	//Test for mail not matched
 	**************************************************************************/
-	@Test(priority=25, enabled=true)
+	@Test(priority=26, enabled=true)
 	public void SubscribeMailNotMatchedTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -491,7 +527,7 @@ public class TestsTeletica {
 	/**************************************************************************
 	//Test for short password
 	**************************************************************************/
-	@Test(priority=26, enabled=true)
+	@Test(priority=27, enabled=true)
 	public void SubscribeShortPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -504,7 +540,7 @@ public class TestsTeletica {
 		elemPassword.sendKeys(configFileReader.getShortPass());
 		//elemPassword.findElement(By.xpath("input")).sendKeys(configFileReader.getShortPass());
 		//Enter short confirm password
-		WebElement elemConfirmPassword = driver.findElement(By.id("auto-subscription-confirmPassword"));
+		WebElement elemConfirmPassword = driver.findElement(By.id("auto-subscription-confirmpassword"));
 		elemConfirmPassword.sendKeys(configFileReader.getShortPass());
 		//elemConfirmPassword.findElement(By.xpath("input")).sendKeys(configFileReader.getShortPass());	
 		
@@ -521,7 +557,7 @@ public class TestsTeletica {
 	/**************************************************************************
 	//Test for not matched password
 	**************************************************************************/
-	@Test(priority=27, enabled=true)
+	@Test(priority=28, enabled=true)
 	public void SubscribeNotMatchedPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -534,7 +570,7 @@ public class TestsTeletica {
 		elemPassword.sendKeys(configFileReader.getCorrectPassText());
 		//elemPassword.findElement(By.xpath("input")).sendKeys(configFileReader.getCorrectPassText());
 		//Enter wrong confirm password
-		WebElement elemConfirmPassword = driver.findElement(By.id("auto-subscription-confirmPassword"));
+		WebElement elemConfirmPassword = driver.findElement(By.id("auto-subscription-confirmpassword"));
 		elemConfirmPassword.sendKeys(configFileReader.getWrongPassText());
 		//elemConfirmPassword.findElement(By.xpath("input")).sendKeys(configFileReader.getWrongPassText());	
 		
@@ -545,14 +581,72 @@ public class TestsTeletica {
 		String actualString = driver.findElement(By.id("PasswordNotMatch-autotest")).getText();
 		Assert.assertTrue(actualString.contains(configFileReader.getPassNotMatchedMsg()));
 		
+	}
+	
+	/**************************************************************************
+	//Test for Enter Future Date
+	**************************************************************************/
+	@Test(priority=29, enabled=true)
+	public void SubscribeFutureDateTest() throws InterruptedException {
 		
+		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+		driver.navigate().refresh();
+/*		
+		//Check Country
+		driver.findElement(By.id("cars"));
+		//Check Male Gender check box
+		driver.findElement(By.id("autotest-male-Teletica"));
+		//Check Female Gender check box
+		driver.findElement(By.id("autotest-female-Teletica"));
+*/		
+		//Enter correct mail
+		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
+		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
+		//Enter correct confirm mail
+		WebElement elemConfirmEmail = driver.findElement(By.id("auto-subscription-confirmEmail"));
+		elemConfirmEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
+		//Enter good pass
+		driver.findElement(By.id("auto-subscription-password")).sendKeys(configFileReader.getCorrectPassText());
+		//Enter good confirm pass
+		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getCorrectPassText());
+		
+		//Enter date in future
+		driver.findElement(By.id("auto_birthDate")).clear();
+		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());
+		//Click on Register button
+		driver.findElement(By.id("auto-continue-btn")).click();
+		AssertJUnit.assertTrue(driver.findElement(By.id("auto_date_invalid")).getText().contains(configFileReader.getDateNotValid()));
+
+	}
+	
+	/**************************************************************************
+	//Test for enter country
+	**************************************************************************/
+	@Test(priority=30, enabled=true)
+	public void SubscribeEnterCountryTest() throws InterruptedException {
+		
+		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+		Select country = new Select(driver.findElement(By.id("cars")));
+		country.selectByValue("Macedonia");
+		
+	}
+	
+	/**************************************************************************
+	//Test for Select Male check box
+	**************************************************************************/
+	@Test(priority=31, enabled=true)
+	public void SubscribeSelectGenderCheckBoxTest() throws InterruptedException {
+		
+		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+		
+		driver.findElement(By.id("autotest-male-Teletica")).click();
 	}
 	
 	
 	/**************************************************************************
 	//Test for subscribe already existed user
 	**************************************************************************/
-	@Test(priority=28, enabled=true)
+	@Test(priority=32, enabled=true)
 	public void SubscribeExistedUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -560,21 +654,27 @@ public class TestsTeletica {
 		//Refresh the login page 
 		driver.navigate().refresh();
 		
-		//Enter existed mail
+		//Enter correct mail
 		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
 		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
-		//Enter existed confirm mail
+		//Enter correct confirm mail
 		WebElement elemConfirmEmail = driver.findElement(By.id("auto-subscription-confirmEmail"));
-		elemConfirmEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());	
-		//Enter existed password
-		WebElement elemPassword = driver.findElement(By.id("auto-subscription-password"));
-		elemPassword.sendKeys(configFileReader.getCorrectPassText());
-		//elemPassword.findElement(By.xpath("input")).sendKeys(configFileReader.getCorrectPassText());
-		//Enter existed confirm password
-		WebElement elemConfirmPassword = driver.findElement(By.id("auto-subscription-confirmPassword"));
-		elemConfirmPassword.sendKeys(configFileReader.getCorrectPassText());
-		//elemConfirmPassword.findElement(By.xpath("input")).sendKeys(configFileReader.getCorrectPassText());	
-				
+		elemConfirmEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
+		//Enter good pass
+		driver.findElement(By.id("auto-subscription-password")).sendKeys(configFileReader.getCorrectPassText());
+		//Enter good confirm pass
+		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getCorrectPassText());
+		
+		
+		//Enter Birth date
+		driver.findElement(By.id("auto_birthDate")).clear();
+		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getCorrectDate());	
+		//Enter country
+		Select country = new Select(driver.findElement(By.id("cars")));
+		country.selectByValue("Macedonia");
+		//Enter gender
+		driver.findElement(By.id("autotest-male-Teletica")).click();
+		
 		//Click on Continue button
 		driver.findElement(By.id("auto-continue-btn")).click();
 
@@ -588,7 +688,7 @@ public class TestsTeletica {
 	/**************************************************************************
 	//Test for creating new user
 	**************************************************************************/
-	@Test(priority=29, enabled=true)
+	@Test(priority=33, enabled=true)
 	public void SubscribeCreateNewUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -612,10 +712,19 @@ public class TestsTeletica {
 		elemPassword.sendKeys(configFileReader.getCorrectPassText());
 		//elemPassword.findElement(By.xpath("input")).sendKeys(configFileReader.getCorrectPassText());
 		//Enter existed confirm password
-		WebElement elemConfirmPassword = driver.findElement(By.id("auto-subscription-confirmPassword"));
+		WebElement elemConfirmPassword = driver.findElement(By.id("auto-subscription-confirmpassword"));
 		elemConfirmPassword.sendKeys(configFileReader.getCorrectPassText());
 		//elemConfirmPassword.findElement(By.xpath("input")).sendKeys(configFileReader.getCorrectPassText());	
-				
+		
+		//Enter Birth date
+		driver.findElement(By.id("auto_birthDate")).clear();
+		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getCorrectDate());	
+		//Enter country
+		Select country = new Select(driver.findElement(By.id("cars")));
+		country.selectByValue("Macedonia");
+		//Enter gender
+		driver.findElement(By.id("autotest-female-Teletica")).click();
+		
 		//Click on Continue button
 		driver.findElement(By.id("auto-continue-btn")).click();
 

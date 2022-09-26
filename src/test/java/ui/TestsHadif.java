@@ -373,7 +373,7 @@ public class TestsHadif {
 	/**************************************************************************
 	//Test for starting subscribe from Subscribe button
 	**************************************************************************/
-	@Test(priority=20, enabled=false)
+	@Test(priority=20, enabled=true)
 	public void SubscribeButtonTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -386,7 +386,7 @@ public class TestsHadif {
 	/**************************************************************************
 	//Test for button Cancel
 	**************************************************************************/
-	@Test(priority=21, enabled=false)
+	@Test(priority=21, enabled=true)
 	public void SubscribeCancelTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -399,7 +399,7 @@ public class TestsHadif {
 	/**************************************************************************
 	//Test for starting subscribe
 	**************************************************************************/
-	@Test(priority=22, enabled=false)
+	@Test(priority=22, enabled=true)
 	public void InitialSubscribeTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -417,7 +417,7 @@ public class TestsHadif {
 	/**************************************************************************
 	//Test for subscribe all empty fields
 	**************************************************************************/
-	@Test(priority=23, enabled=false)
+	@Test(priority=23, enabled=true)
 	public void SubscribeEmptyFieldsTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -444,7 +444,7 @@ public class TestsHadif {
 	/**************************************************************************
 	//Test for subscribe bad formated mail
 	**************************************************************************/
-	@Test(priority=24, enabled=false)
+	@Test(priority=24, enabled=true)
 	public void SubscribeBadFormatedMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -470,7 +470,7 @@ public class TestsHadif {
 	/**************************************************************************
 	//Test for mail not matched
 	**************************************************************************/
-	@Test(priority=25, enabled=false)
+	@Test(priority=25, enabled=true)
 	public void SubscribeMailNotMatchedTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -494,7 +494,7 @@ public class TestsHadif {
 	/**************************************************************************
 	//Test for short password
 	**************************************************************************/
-	@Test(priority=26, enabled=false)
+	@Test(priority=26, enabled=true)
 	public void SubscribeShortPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -520,7 +520,7 @@ public class TestsHadif {
 	/**************************************************************************
 	//Test for not matched password
 	**************************************************************************/
-	@Test(priority=27, enabled=false)
+	@Test(priority=27, enabled=true)
 	public void SubscribeNotMatchedPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -544,7 +544,7 @@ public class TestsHadif {
 	/**************************************************************************
 	//Test for subscribe already existed user
 	**************************************************************************/
-	@Test(priority=28, enabled=false)
+	@Test(priority=28, enabled=true)
 	public void SubscribeExistedUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -584,7 +584,7 @@ public class TestsHadif {
 	/**************************************************************************
 	//Test for creating new user
 	**************************************************************************/
-	@Test(priority=29, enabled=false)
+	@Test(priority=29, enabled=true)
 	public void SubscribeCreateNewUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);

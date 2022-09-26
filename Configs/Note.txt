@@ -1,25 +1,11 @@
---- Cariflix - OK
---- Eduflix - OK
---- Panam - OK
-Teletica (TDMAX) - OK (samo test Cancel Subscribe ne raboti)
-TourTok - OK
-TvTel (CDO+) - OK
-VivaMax - OK (otkazana e VivaMax - obsolete)
-WIPR - OK (Celosno prepraven mu falat ID na labelite)
-Swarmio - OK
-SVG - OK -> (isfrlen login)
-PEITV - OK -> Falat ID za registration
-RidersTV - OK -> (isfrlen)
---- Hekaya(Arab Telemedia) - OK
+VivaMax - (otkazana e VivaMax - obsolete)
+TourTok - (otkazan e Tourtok - obsolete)
+RidersTV - (otkazana e RidersTV - obsolete)
+Talking Wealth - (otkazan - obsolete)
+TvTel (CDO+) - (otkazan - obsolete)
+SVG - (login so nadvoresni SSO strani)
+
 Hadif - OK do Subscription (nov dizajn kje ima)
---- HERFLIX - OK
---- Titan - OK
---- ThreeCommas - OK
---- Kuarzo - OK
---- FamilyPlay - OK
---- AmericanoMedia - OK
-Talking Wealth - OK
---- LEN - samo pocnata (nema ID skoro za nisto)
 
 
 NANOVO
@@ -31,6 +17,20 @@ Eduflix - OK
 Titan - OK
 AmericanoMedia - OK
 Kuarzo - OK
-FamilyPlay - OK (ima BUG za Future date)
+FamilyPlay - OK
 ThreeCommas - OK
 Hekaya(Arab Telemedia) - OK
+Tuvvo - OK
+PEITV - OK
+Swarmio - OK
+WIPR - OK
+Teletica (TDMAX) - OK
+Bethel - OK
+Bethel Media - OK
+Self Made - OK
+
+NEXT
+Eurovision (AllAquatics) -
+AllGymnastics - 
+TVN - 
+Europa - 

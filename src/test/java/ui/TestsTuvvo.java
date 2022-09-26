@@ -18,14 +18,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import dataProvider.ConfigFileReaderPEITV;
+import dataProvider.ConfigFileReaderTuvvo;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TestsPEITV {
+public class TestsTuvvo {
 
 	WebDriver driver;
 	String browserId;
-	ConfigFileReaderPEITV configFileReader= new ConfigFileReaderPEITV();
+	ConfigFileReaderTuvvo configFileReader= new ConfigFileReaderTuvvo();
 	//ConfigFileReaderMain configFileReaderMain= new ConfigFileReaderMain();
 	
 	@BeforeTest
@@ -441,23 +441,19 @@ public class TestsPEITV {
 		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
 		//Check message for Last Name
 		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
-		/*
 		//Check message for Country
 		Assert.assertTrue(driver.findElement(By.id("auto_country_field")).getText().contains(configFileReader.getFieldRequiredText()));
-		*/
 		//Check message for Email
 		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
 		//Check message for First Name
 		Assert.assertTrue(driver.findElement(By.id("autotest-password-required")).getText().contains(configFileReader.getFieldRequiredText()));
 		//Check message for First Name
 		Assert.assertTrue(driver.findElement(By.id("autotest-confirmPassword")).getText().contains(configFileReader.getFieldRequiredText()));
-		/*
 		//Check message for Birth Date
 		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
-		*/
 		//Check message for Accept Terms and Privacy Check Box
 		Assert.assertTrue(driver.findElement(By.id("autotest-checktheBox")).getText().contains(configFileReader.getFieldCheckBoxText()));
-					
+				
 	}
 	
 	
@@ -468,7 +464,10 @@ public class TestsPEITV {
 	public void SubscribeBadFormatedMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-			
+		
+		//Refresh the login page 
+		//driver.navigate().refresh();
+		
 		//Enter bad formated mail
 		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
 		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getBadFormatedMailText());
@@ -478,7 +477,7 @@ public class TestsPEITV {
 		
 	}
 	
-
+	
 	/**************************************************************************
 	//Test for short password
 	**************************************************************************/
@@ -533,10 +532,11 @@ public class TestsPEITV {
 
 	}
 	
+	
 	/**************************************************************************
 	//Test for enter country
 	**************************************************************************/
-	@Test(priority=29, enabled=false)
+	@Test(priority=29, enabled=true)
 	public void SubscribeEnterCountryTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -580,14 +580,26 @@ public class TestsPEITV {
 		WebElement lastName = driver.findElement(By.id("auto_lastName"));
 		lastName.findElement(By.tagName("input")).sendKeys(configFileReader.getLastName());
 	}
-
+	
+	
 	/**************************************************************************
 	//Test for Enter Future Date
 	**************************************************************************/
-	@Test(priority=33, enabled=false)
+	@Test(priority=33, enabled=true)
 	public void SubscribeFutureDateTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+		
+		//Enter existed mail
+		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
+		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
+		//Enter correct pass
+		driver.findElement(By.id("auto-subscription-password")).clear();
+		driver.findElement(By.id("auto-subscription-password")).sendKeys(configFileReader.getCorrectPassText());
+		//Enter correct confirm password
+		driver.findElement(By.id("auto-subscription-confirmpassword")).clear();
+		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getCorrectPassText());	
+
 		//Enter date in future
 		driver.findElement(By.id("auto_birthDate")).clear();
 		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());
@@ -596,8 +608,6 @@ public class TestsPEITV {
 		Assert.assertTrue(driver.findElement(By.id("auto_date_invalid")).getText().contains(configFileReader.getDateNotValid()));
 
 	}
-	
-
 	
 	
 	/**************************************************************************
@@ -617,11 +627,9 @@ public class TestsPEITV {
 		//Enter Last name again
 		WebElement lastName = driver.findElement(By.id("auto_lastName"));
 		lastName.findElement(By.tagName("input")).sendKeys(configFileReader.getLastName());
-		/*
 		//Enter country
 		Select country = new Select(driver.findElement(By.id("cars")));
 		country.selectByValue("Macedonia");
-		*/
 		//Enter existed mail
 		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
 		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
@@ -629,11 +637,9 @@ public class TestsPEITV {
 		driver.findElement(By.id("auto-subscription-password")).sendKeys(configFileReader.getCorrectPassText());
 		//Enter good confirm pass
 		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getCorrectPassText());
-		/*
 		//Enter Birth date
 		driver.findElement(By.id("auto_birthDate")).clear();
 		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getCorrectDate());
-		*/
 		//Select Accept Terms of use and Privacy
 		driver.findElement(By.id("auto-subscription-terms-policy")).click();
 		
@@ -644,7 +650,7 @@ public class TestsPEITV {
 		Thread.sleep(configFileReader.getSleepTime());
 		WebElement elemToast = driver.findElement(By.id("toast-container"));
 		elemToast.findElement(By.tagName("div"));
-	}	
+	}		
 	
 	
 	/**************************************************************************
@@ -654,7 +660,7 @@ public class TestsPEITV {
 	public void SubscribeCreateNewUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-			
+		
 		//Set value for new user
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyyHHmmss");
 		LocalDateTime now = LocalDateTime.now();
@@ -670,10 +676,11 @@ public class TestsPEITV {
 		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
 
 		//Check is the new user logged?
-		//driver.findElement(By.id("auto-login-avatar-face")).click();
-		//Assert.assertEquals(driver.findElement(By.id("auto-login-logout")).getText(), configFileReader.getLogoutText());
+		driver.findElement(By.id("auto-login-avatar-face")).click();
+		Assert.assertEquals(driver.findElement(By.id("auto-login-logout")).getText(), configFileReader.getLogoutText());
+		
+	}
 	
-	}	
 	
 	
 

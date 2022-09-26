@@ -36,9 +36,9 @@ public class TestsPanam {
 
 		if (browserId.contains("chrome")) {
 			WebDriverManager.chromedriver().setup();
- 			driver = new ChromeDriver();
- 			driver.get(configFileReader.getApplicationUrl());
- 			driver.manage().window().maximize();
+			driver = new ChromeDriver();
+			driver.get(configFileReader.getApplicationUrl());
+			driver.manage().window().maximize();
 		}
 		if (browserId.contains("edge")) {
 			WebDriverManager.edgedriver().setup();

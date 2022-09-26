@@ -359,7 +359,7 @@ public class TestsFamilyPlay {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		driver.findElement(By.id("cookiebutton")).click();	
-		//Click on login
+		//Click on button Subscribe
 		driver.findElement(By.id("auto-test-subscribeButtonTop")).click();
 	
 	}
@@ -580,25 +580,9 @@ public class TestsFamilyPlay {
 	}
 	
 	/**************************************************************************
-	//Test for Enter Future Date
-	**************************************************************************/
-	@Test(priority=33, enabled=true)
-	public void SubscribeFutureDateTest() throws InterruptedException {
-		
-		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-		//Enter date in future
-		driver.findElement(By.id("auto_birthDate")).clear();
-		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());
-		//Click on Register button
-		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
-		Assert.assertTrue(driver.findElement(By.id("auto_date_invalid")).getText().contains(configFileReader.getDateNotValid()));
-
-	}
-	
-	/**************************************************************************
 	//Test for Enter City
 	**************************************************************************/
-	@Test(priority=34, enabled=true)
+	@Test(priority=33, enabled=true)
 	public void SubscribeEnterCityTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -608,6 +592,51 @@ public class TestsFamilyPlay {
 		elem.findElement(By.tagName("input")).sendKeys("Bitola");
 		
 	}
+	
+	/**************************************************************************
+	//Test for Enter Future Date
+	**************************************************************************/
+	@Test(priority=34, enabled=true)
+	public void SubscribeFutureDateTest() throws InterruptedException {
+		
+		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+		
+		//Refresh the login page 
+		driver.navigate().refresh();
+				
+		//Enter first name again
+		WebElement firstName = driver.findElement(By.id("auto_firstName"));
+		firstName.findElement(By.tagName("input")).sendKeys(configFileReader.getFirstName());
+		//Enter Last name again
+		WebElement lastName = driver.findElement(By.id("auto_lastName"));
+		lastName.findElement(By.tagName("input")).sendKeys(configFileReader.getLastName());
+		//Enter country
+		Select country = new Select(driver.findElement(By.id("cars")));
+		country.selectByValue("Albania");
+		//Enter existed mail
+		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
+		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
+		//Enter good pass
+		WebElement elemPass = driver.findElement(By.id("auto-subscription-password"));
+		elemPass.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectPassText());
+		//Enter good confirm pass
+		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getCorrectPassText());
+		//Enter date in future
+		driver.findElement(By.id("auto_birthDate")).clear();
+		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());
+		//Enter City
+		WebElement elem = driver.findElement(By.id("city"));
+		elem.findElement(By.tagName("input")).sendKeys("Bitola");
+		//Select Accept Terms of use and Privacy
+		driver.findElement(By.id("auto-subscription-terms-policy")).click();
+				
+		//Click on Register button
+		driver.findElement(By.id("auto-subscription-subscribe-button")).click();		
+
+		Assert.assertTrue(driver.findElement(By.id("auto_date_invalid")).getText().contains(configFileReader.getDateNotValid()));
+
+	}
+	
 
 	/**************************************************************************
 	//Test for subscribe already existed user
