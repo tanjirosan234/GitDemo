@@ -62,9 +62,8 @@ public class TestsPanamHeadless {
         driver.get(configFileReader.getApplicationUrl());
 		
 	//Print the title of the page
-        System.out.println("Title of the page is -> " + driver.getTitle());
-        
-        
+        // System.out.println("Title of the page is -> " + driver.getTitle());
+         
 	}
 /**************************************	
 ***************************************
