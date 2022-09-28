@@ -9,7 +9,7 @@ import java.util.Properties;
 public class ConfigFileReaderPanam {
 	
 	private Properties propertiesPanam;
-	private final String propertyFilePath = "configs//ConfigurationPanam.properties";
+	private final String propertyFilePath = "Configs/ConfigurationPanam.properties";
 	public ConfigFileReaderPanam() {
 		BufferedReader reader;
 		try {
