@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -23,15 +24,16 @@ import org.testng.annotations.Test;
 import dataProvider.ConfigFileReaderPanam;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TestsPanam {
+public class TestsPanamHeadless {
 
-	WebDriver driver;
-	String browserId;
+	HtmlUnitDriver driver;
+	//String browserId;
 	ConfigFileReaderPanam configFileReader= new ConfigFileReaderPanam();
 	//ConfigFileReaderMain configFileReaderMain= new ConfigFileReaderMain();
 	
 	@BeforeTest
 	public void Prerequisites() {
+		/*
 		String browserId = configFileReader.getBrowserId();
 
 		if (browserId.contains("chrome")) {
@@ -52,6 +54,17 @@ public class TestsPanam {
 			driver.get(configFileReader.getApplicationUrl());
 			driver.manage().window().maximize();
 		}
+		*/
+		// Declaring and initialising the HtmlUnitWebDriver
+         driver = new HtmlUnitDriver();
+        
+        // open demo site webpage
+        driver.get(configFileReader.getApplicationUrl());
+		
+	//Print the title of the page
+        System.out.println("Title of the page is -> " + driver.getTitle());
+        
+        
 	}
 /**************************************	
 ***************************************
@@ -64,7 +77,7 @@ public class TestsPanam {
 	 **************************************************************************/
 	@Test(priority=1, enabled=true)
 	public void StartLoginTest() {
-		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		//Select Login link
 		driver.findElement(By.id("auto-btn-login")).click();
 		
@@ -93,9 +106,9 @@ public class TestsPanam {
 	/**************************************************************************
 	Test for checking login with empty EMail
 	***************************************************************************/
-	@Test(priority=2, enabled=true)
+	@Test(priority=2, enabled=false)
 	public void EmptyMailLoginTest() {
-		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 			
 		//Clear email field
 		WebElement loginField = driver.findElement(By.id("autotest-login-emailLabel"));
@@ -114,7 +127,7 @@ public class TestsPanam {
 	/**************************************************************************
 	Test for checking login with empty Password
 	***************************************************************************/
-	@Test(priority=3, enabled=true)
+	@Test(priority=3, enabled=false)
 	public void EmptyPasswordLoginTest() {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		
@@ -137,7 +150,7 @@ public class TestsPanam {
 	/**************************************************************************
 	Test for checking login with empty EMail and Password
 	***************************************************************************/
-	@Test(priority=4, enabled=true)
+	@Test(priority=4, enabled=false)
 	public void EmptyMailPasswordLoginTest() {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		
@@ -162,7 +175,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for checking login with wrong user and correct password
 	 **************************************************************************/
-	@Test(priority=5, enabled=true)
+	@Test(priority=5, enabled=false)
 	public void WrongUserCorrectPasswordLoginTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		driver.navigate().refresh();
@@ -186,7 +199,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for checking login with correct user and wrong password
 	 **************************************************************************/
-	@Test(priority=6, enabled=true)
+	@Test(priority=6, enabled=false)
 	public void CorrectUserWrongPasswordLoginTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		driver.navigate().refresh();
@@ -210,7 +223,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for checking login with wrong user and password
 	 **************************************************************************/
-	@Test(priority=7, enabled=true)
+	@Test(priority=7, enabled=false)
 	public void WrongUserWrongPasswordLoginTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		driver.navigate().refresh();
@@ -234,7 +247,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for checking successful login with correct user and password
 	**************************************************************************/
-	@Test(priority=8, enabled=true)
+	@Test(priority=8, enabled=false)
 	public void SuccessfulLoginTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		
@@ -261,7 +274,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for checking My Account
 	**************************************************************************/
-	@Test(priority=9, enabled=true)
+	@Test(priority=9, enabled=false)
 	public void MyAccountTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		//Refresh the login page 
@@ -279,7 +292,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for checking Log out
 	**************************************************************************/
-	@Test(priority=10, enabled=true)
+	@Test(priority=10, enabled=false)
 	public void LogoutTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		
@@ -385,7 +398,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for checking start Forgot Password Test
 	**************************************************************************/
-	@Test(priority=21, enabled=true)
+	@Test(priority=21, enabled=false)
 	public void StartForgotPasswordTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		
@@ -405,7 +418,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for checking sending empty mail
 	**************************************************************************/	
-	@Test(priority=22, enabled=true)
+	@Test(priority=22, enabled=false)
 	public void EmptyMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -426,7 +439,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for checking sending wrong format of mail
 	**************************************************************************/	
-	@Test(priority=23, enabled=true)
+	@Test(priority=23, enabled=false)
 	public void WrongFormatMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -447,7 +460,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for checking sending not existing of mail
 	**************************************************************************/
-	@Test(priority=24, enabled=true)
+	@Test(priority=24, enabled=false)
 	public void NotExistingMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -472,7 +485,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for checking Cancel button
 	**************************************************************************/
-	@Test(priority=25, enabled=true)
+	@Test(priority=25, enabled=false)
 	public void CancelButtonTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -492,7 +505,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for starting subscribe from Subscribe button
 	**************************************************************************/
-	@Test(priority=30, enabled=true)
+	@Test(priority=30, enabled=false)
 	public void SubscribeButtonTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -512,7 +525,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for check all fields in subscribe page
 	**************************************************************************/
-	@Test(priority=31, enabled=true)
+	@Test(priority=31, enabled=false)
 	public void CheckSubscribeFieldsTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -546,7 +559,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for subscribe all empty fields
 	**************************************************************************/
-	@Test(priority=32, enabled=true)
+	@Test(priority=32, enabled=false)
 	public void SubscribeEmptyFieldsTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -577,7 +590,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for subscribe bad formated mail
 	**************************************************************************/
-	@Test(priority=33, enabled=true)
+	@Test(priority=33, enabled=false)
 	public void SubscribeBadFormatedMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -599,7 +612,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for short password
 	**************************************************************************/
-	@Test(priority=34, enabled=true)
+	@Test(priority=34, enabled=false)
 	public void SubscribeShortPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -616,7 +629,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for short confirm password
 	**************************************************************************/
-	@Test(priority=35, enabled=true)
+	@Test(priority=35, enabled=false)
 	public void SubscribeShortConfirmPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -633,7 +646,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for not matched password
 	**************************************************************************/
-	@Test(priority=36, enabled=true)
+	@Test(priority=36, enabled=false)
 	public void SubscribeNotMatchedPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -652,7 +665,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for enter country
 	**************************************************************************/
-	@Test(priority=37, enabled=true)
+	@Test(priority=37, enabled=false)
 	public void SubscribeEnterCountryTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -664,7 +677,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for Select Favorite Sport
 	**************************************************************************/
-	@Test(priority=38, enabled=true)
+	@Test(priority=38, enabled=false)
 	public void SubscribeFavoriteSportTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -676,7 +689,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for Select Terms and Privacy check box
 	**************************************************************************/
-	@Test(priority=39, enabled=true)
+	@Test(priority=39, enabled=false)
 	public void SubscribeSelectTermsPrivacyCheckBoxTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -687,7 +700,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for Enter First Name
 	**************************************************************************/
-	@Test(priority=40, enabled=true)
+	@Test(priority=40, enabled=false)
 	public void SubscribeEnterFirstNameTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -699,7 +712,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for Enter Last Name
 	**************************************************************************/
-	@Test(priority=41, enabled=true)
+	@Test(priority=41, enabled=false)
 	public void SubscribeEnterLastNameTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -711,38 +724,13 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for Enter Future Date
 	**************************************************************************/
-	@Test(priority=42, enabled=true)
+	@Test(priority=42, enabled=false)
 	public void SubscribeFutureDateTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-		
-		//Refresh the login page 
-		driver.navigate().refresh();
-				
-		//Enter first name again
-		WebElement firstName = driver.findElement(By.id("auto_firstName"));
-		firstName.findElement(By.tagName("input")).sendKeys(configFileReader.getFirstName());
-		//Enter Last name again
-		WebElement lastName = driver.findElement(By.id("auto_lastName"));
-		lastName.findElement(By.tagName("input")).sendKeys(configFileReader.getLastName());
-		//Enter country
-		Select country = new Select(driver.findElement(By.id("cars")));
-		country.selectByValue("Macedonia");
-		//Enter existed mail
-		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
-		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
-		//Enter good pass
-		driver.findElement(By.id("auto-subscription-password")).sendKeys(configFileReader.getCorrectPassText());
-		//Enter good confirm pass
-		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getCorrectPassText());
 		//Enter date in future
 		driver.findElement(By.id("auto_birthDate")).clear();
-		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());		//Enter Favorite sport
-		Select favoriteSport = new Select(driver.findElement(By.id("sportsDropdown")));
-		favoriteSport.selectByVisibleText(configFileReader.getFavoriteSPort());
-		//Select Accept Terms of use and Privacy
-		driver.findElement(By.id("auto-subscription-terms-policy")).click();
-
+		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());
 		//Click on Register button
 		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
 		AssertJUnit.assertTrue(driver.findElement(By.id("auto_date_invalid")).getText().contains(configFileReader.getDateNotValid()));
@@ -754,7 +742,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for subscribe already existed user
 	**************************************************************************/
-	@Test(priority=43, enabled=true)
+	@Test(priority=43, enabled=false)
 	public void SubscribeExistedUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -800,7 +788,7 @@ public class TestsPanam {
 	/**************************************************************************
 	//Test for creating new user
 	**************************************************************************/
-	@Test(priority=44, enabled=true)
+	@Test(priority=44, enabled=false)
 	public void SubscribeCreateNewUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
