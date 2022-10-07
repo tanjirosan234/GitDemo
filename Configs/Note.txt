@@ -5,12 +5,8 @@ Talking Wealth - (otkazan - obsolete)
 TvTel (CDO+) - (otkazan - obsolete)
 SVG - (login so nadvoresni SSO strani)
 
-Hadif - OK do Subscription (nov dizajn kje ima)
-
-
 NANOVO
 Panam - OK
-Herflix - OK
 Cariflix - OK (Registration -> Login -> Forgot password)
 LEN TV - OK
 Eduflix - OK
@@ -28,9 +24,11 @@ Teletica (TDMAX) - OK
 Bethel - OK
 Bethel Media - OK
 Self Made - OK
+Europa - OK
 
 NEXT
+Hadif - OK do Subscription (nov dizajn kje ima)
 Eurovision (AllAquatics) -
 AllGymnastics - 
 TVN - 
-Europa - 
+Herflix - NOK (go izmenija celosno i uste se menuva)
