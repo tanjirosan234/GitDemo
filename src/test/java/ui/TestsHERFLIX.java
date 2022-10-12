@@ -65,16 +65,18 @@ public class TestsHERFLIX {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		//Select Login link
 		driver.findElement(By.id("auto-btn-login")).click();
+		//Check is the Join for free available
+		driver.findElement(By.id("auto_join_free"));
 		//Check is the user field available
-		driver.findElement(By.id("auto-login-emailLabel"));
+		driver.findElement(By.id("auto-email"));
 		//Check is the password field available
-		driver.findElement(By.id("auto-login-passwordLabel"));
+		driver.findElement(By.id("auto_password"));
 		//Check is the check box "Remember me" available
-		driver.findElement(By.id("auto-login-rememberMe"));
+		driver.findElement(By.id("checkbox"));
 		//Check is the Button "Forgot password?" available
-		driver.findElement(By.id("auto-login-forgotPassword"));
+		driver.findElement(By.id("auto_forgotPassword"));
 		//Check is the Button "Log In" available
-		driver.findElement(By.id("auto-login-button"));
+		driver.findElement(By.id("auto_sign_button"));
 		
 		/*
 		//Check is the Button "Facebook Login" available
@@ -84,8 +86,6 @@ public class TestsHERFLIX {
 		//Check is the Button "Apple Login" available
 		driver.findElement(By.id("auto-login-appleLogin"));
 		*/
-		//Check is the link "New? Sign Up now..." available
-		driver.findElement(By.id("auto-login-newSignUp2"));
 	}
 	
 	/**************************************************************************
@@ -96,14 +96,14 @@ public class TestsHERFLIX {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 			
 		//Clear user field
-		WebElement loginField = driver.findElement(By.id("auto-login-emailLabel"));
+		WebElement loginField = driver.findElement(By.id("auto-email"));
 		loginField.findElement(By.tagName("input")).clear();
 		//Clear password field 
-		WebElement passwordField = driver.findElement(By.id("auto-login-passwordLabel"));
+		WebElement passwordField = driver.findElement(By.id("auto_password"));
 		passwordField.findElement(By.tagName("input")).clear();
 			
 		//Click on the Button "Log In"
-		driver.findElement(By.id("auto-login-button")).click();
+		driver.findElement(By.id("auto_sign_button")).click();
 			
 		//Check message that need user to be entered
 		Assert.assertEquals(loginField.findElement(By.id("auto-customInput-fieldRequired1")).getText(), configFileReader.getFieldRequiredText());
@@ -117,18 +117,20 @@ public class TestsHERFLIX {
 	@Test(priority=3, enabled=true)
 	public void WrongLoginTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-		driver.navigate().refresh();
+		//driver.navigate().refresh();
 		
 		//Enter wrong user field
-		WebElement loginField = driver.findElement(By.id("auto-login-emailLabel"));
+		WebElement loginField = driver.findElement(By.id("auto-email"));
+		loginField.findElement(By.tagName("input")).clear();
 		loginField.findElement(By.tagName("input")).sendKeys(configFileReader.getWrongUserText());
 		
 		//Enter wrong password field 
-		WebElement passwordField = driver.findElement(By.id("auto-login-passwordLabel"));
+		WebElement passwordField = driver.findElement(By.id("auto_password"));
+		passwordField.findElement(By.tagName("input")).clear();
 		passwordField.findElement(By.tagName("input")).sendKeys(configFileReader.getWrongPassText());
 			
 		//Click on the Button "Log In" 
-		driver.findElement(By.id("auto-login-button")).click();
+		driver.findElement(By.id("auto_sign_button")).click();
 		
 		Thread.sleep(configFileReader.getSleepTime());
 		//Check message that informs wrong user/pass are entered
@@ -143,18 +145,20 @@ public class TestsHERFLIX {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		
 		//Refresh the login page 
-		driver.navigate().refresh();
+		//driver.navigate().refresh();
 			
 		//Enter correct user field 
-		WebElement loginField = driver.findElement(By.id("auto-login-emailLabel"));
+		WebElement loginField = driver.findElement(By.id("auto-email"));
+		loginField.findElement(By.tagName("input")).clear();
 		loginField.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
 		
 		//Enter correct password field 
-		WebElement passwordField = driver.findElement(By.id("auto-login-passwordLabel"));
+		WebElement passwordField = driver.findElement(By.id("auto_password"));
+		passwordField.findElement(By.tagName("input")).clear();
 		passwordField.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectPassText());
 
 		//Click on the Button "Log In" 
-		driver.findElement(By.id("auto-login-button")).click();
+		driver.findElement(By.id("auto_sign_button")).click();
 
 		//Check is logged?
 		driver.findElement(By.id("auto-login-avatar-face")).click();
@@ -169,10 +173,10 @@ public class TestsHERFLIX {
 	public void MyAccountTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		//Refresh the login page 
-		driver.navigate().refresh();
+		//driver.navigate().refresh();
 		
 		//Open My Account page
-		driver.findElement(By.id("auto-login-avatar-face")).click();
+		//driver.findElement(By.id("auto-login-avatar-face")).click();
 		driver.findElement(By.id("auto-login-myAcc")).click();
 		
 		//Check Account name
@@ -256,13 +260,13 @@ public class TestsHERFLIX {
 		driver.findElement(By.id("auto-btn-login")).click();
 		
 		//Click on Forgot password link button
-		driver.findElement(By.id("auto-login-forgotPassword")).click();
+		driver.findElement(By.id("auto_forgotPassword")).click();
 		
 		//Click on Go back button
 		driver.findElement(By.id("auto-test-forgotpass-back")).click();
 		
 		//Click again on Forgot password link button
-		driver.findElement(By.id("auto-login-forgotPassword")).click();
+		driver.findElement(By.id("auto_forgotPassword")).click();
 	}
 	
 	/**************************************************************************
@@ -274,11 +278,11 @@ public class TestsHERFLIX {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 			
 		//Clear user or mail field for every case
-		WebElement elemEmail = driver.findElement(By.id("auto-test-forgotpass"));
+		WebElement elemEmail = driver.findElement(By.id("auto_email_forgotpass"));
 		elemEmail.findElement(By.tagName("input")).clear();
 			
-		//Click on Send Mail button
-		driver.findElement(By.id("auto-test-send")).click();
+		//Click on Submit button
+		driver.findElement(By.id("auto_button_for_pass")).click();
 			
 		//Check message for empty mail
 		Assert.assertEquals(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText(), configFileReader.getFieldRequiredText());
@@ -295,11 +299,11 @@ public class TestsHERFLIX {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 			
 		//Enter bad formated user or mail field
-		WebElement elemEmail = driver.findElement(By.id("auto-test-forgotpass"));
+		WebElement elemEmail = driver.findElement(By.id("auto_email_forgotpass"));
 		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getBadFormatedMailText());
 			
-		//Click on Send Mail button
-		driver.findElement(By.id("auto-test-send")).click();
+		//Click on Submit button
+		driver.findElement(By.id("auto_button_for_pass")).click();
 			
 		//Check message for empty mail
 		Assert.assertEquals(driver.findElement(By.id("auto-customInput-fieldRequired2")).getText(), configFileReader.getNotValidMailText());
@@ -316,32 +320,32 @@ public class TestsHERFLIX {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 			
 		//Clear user or mail field for every case
-		WebElement elemEmail = driver.findElement(By.id("auto-test-forgotpass"));
+		WebElement elemEmail = driver.findElement(By.id("auto_email_forgotpass"));
 		elemEmail.findElement(By.tagName("input")).clear();
 		
 		//Enter not existing user or mail field
 		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getIncorrectMailText());
 			
-		//Click on Send Mail button
-		driver.findElement(By.id("auto-test-send")).click();
+		//Click on Submit button
+		driver.findElement(By.id("auto_button_for_pass")).click();
 			
 		Thread.sleep(configFileReader.getSleepTime());
 		//Check message for not existed mail
-		Assert.assertEquals(driver.findElement(By.id("auto-test-forgotpass1")).getText(), configFileReader.getIncorrectMailMsgText());
+		Assert.assertTrue(driver.findElement(By.id("auto-test-forgotpass1")).getText().contains(configFileReader.getIncorrectMailMsgText()));
 	
 	}
 
 	
 	/**************************************************************************
-	//Test for checking Cancel button
+	//Test for checking Back button
 	**************************************************************************/
 	@Test(priority=15, enabled=true)
-	public void CancelButtonTest() throws InterruptedException {
+	public void BackButtonTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 			
 		//Click on Cancel button
-		driver.findElement(By.id("auto-test-cancel")).click();
+		driver.findElement(By.id("auto-test-forgotpass-back")).click();
 
 	}
 	
@@ -365,7 +369,7 @@ public class TestsHERFLIX {
 		driver.findElement(By.id("auto-btn-login")).click();
 
 		//Click on "New? Sign up now..." link button
-		driver.findElement(By.id("auto-login-newSignUp2")).click();
+		driver.findElement(By.id("auto_join_free")).click();
 	
 	}
 	
@@ -377,26 +381,22 @@ public class TestsHERFLIX {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 			
-		//Check first name
+		//Check name
 		driver.findElement(By.id("auto_firstName"));
-		//Check last name
-		driver.findElement(By.id("auto_lastName"));
-		//Check Country
-		driver.findElement(By.id("cars"));
+		
 		//Check Email
-		driver.findElement(By.id("auto-subscription-email"));		
+		driver.findElement(By.id("auto_lastName"));		
 		//Check Password
-		driver.findElement(By.id("auto-subscription-password"));
+		driver.findElement(By.id("auto_password"));
 		//Check Confirm password
-		driver.findElement(By.id("auto-subscription-confirmpassword"));
-		//Check Birth Date
-		driver.findElement(By.id("auto_birthDate"));		
-		//Check Accept terms and Privacy
-		driver.findElement(By.id("auto-subscription-terms-policy"));
+		driver.findElement(By.id("auto_re-enter_pass"));
+		//Check Favorite actor
+		driver.findElement(By.id("auto_favoriteActor"));		
+		
 		//Check Accept receive mails
-		driver.findElement(By.id("auto-subscription-terms-eduflix"));
+		driver.findElement(By.id("auto_subscribedForEmailMarketing"));
 		//Check Register button
-		driver.findElement(By.id("auto-subscription-subscribe-button"));
+		driver.findElement(By.id("auto_button_subsribe"));
 						
 	}	
 	
@@ -409,24 +409,16 @@ public class TestsHERFLIX {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 			
 		//Click on Register button
-		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
-
-		//Check message for First Name
-		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
-		//Check message for Last Name
-		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
-		//Check message for Country
-		Assert.assertTrue(driver.findElement(By.id("auto_country_field")).getText().contains(configFileReader.getFieldRequiredText()));
+		driver.findElement(By.id("auto_button_subsribe")).click();
+		
+		//Check message for Name
+		Assert.assertTrue(driver.findElement(By.xpath("/html/body/streann-root/div/streann-subscription/streann-second-step/div/div/div/div[2]/form/streann-custom-input[1]/div")).getText().contains(configFileReader.getFieldRequiredText()));
 		//Check message for Email
-		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
-		//Check message for First Name
-		Assert.assertTrue(driver.findElement(By.id("autotest-password-required")).getText().contains(configFileReader.getFieldRequiredText()));
-		//Check message for First Name
-		Assert.assertTrue(driver.findElement(By.id("autotest-confirmPassword")).getText().contains(configFileReader.getFieldRequiredText()));
-		//Check message for Birth Date
-		Assert.assertTrue(driver.findElement(By.id("auto-customInput-fieldRequired1")).getText().contains(configFileReader.getFieldRequiredText()));
-		//Check message for Accept Terms and Privacy Check Box
-		Assert.assertTrue(driver.findElement(By.id("autotest-checktheBox")).getText().contains(configFileReader.getFieldCheckBoxText()));
+		Assert.assertTrue(driver.findElement(By.xpath("/html/body/streann-root/div/streann-subscription/streann-second-step/div/div/div/div[2]/form/streann-custom-input[2]/div")).getText().contains(configFileReader.getFieldRequiredText()));
+		//Check message for Password
+		Assert.assertTrue(driver.findElement(By.xpath("/html/body/streann-root/div/streann-subscription/streann-second-step/div/div/div/div[2]/form/div[1]/div[2]")).getText().contains(configFileReader.getFieldRequiredText()));
+		//Check message for Confirm Password
+		Assert.assertTrue(driver.findElement(By.xpath("/html/body/streann-root/div/streann-subscription/streann-second-step/div/div/div/div[2]/form/div[2]/div[2]")).getText().contains(configFileReader.getFieldRequiredText()));
 				
 	}
 	
@@ -443,11 +435,11 @@ public class TestsHERFLIX {
 		//driver.navigate().refresh();
 		
 		//Enter bad formated mail
-		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
-		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getBadFormatedMailText());
+		WebElement elemEmail = driver.findElement(By.id("auto_lastName"));
+		elemEmail.findElement(By.xpath("/html/body/streann-root/div/streann-subscription/streann-second-step/div/div/div/div[2]/form/streann-custom-input[2]/input")).sendKeys(configFileReader.getBadFormatedMailText());
 
 		//Check message for Email
-		Assert.assertTrue(elemEmail.findElement(By.id("auto-customInput-fieldRequired2")).getText().contains(configFileReader.getNotValidMailText()));
+		Assert.assertTrue(elemEmail.findElement(By.xpath("/html/body/streann-root/div/streann-subscription/streann-second-step/div/div/div/div[2]/form/streann-custom-input[2]/div")).getText().contains(configFileReader.getNotValidMailText()));
 		
 	}
 	
@@ -460,153 +452,76 @@ public class TestsHERFLIX {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		
 		//Enter short password
-		driver.findElement(By.id("auto-subscription-password")).sendKeys(configFileReader.getShortPass());
+		driver.findElement(By.id("auto_password")).sendKeys(configFileReader.getShortPass());
 		
 		//Check message for Password
-		System.out.println(driver.findElement(By.id("shortPassword-autotest")).getText());
-		Assert.assertTrue(driver.findElement(By.id("shortPassword-autotest")).getText().contains(configFileReader.getShortPassMsg()));
+		Assert.assertTrue(driver.findElement(By.xpath("/html/body/streann-root/div/streann-subscription/streann-second-step/div/div/div/div[2]/form/div[1]/div[2]")).getText().contains(configFileReader.getShortPassMsg()));
 		
-	}
-	
-	
-	/**************************************************************************
-	//Test for short confirm password
-	**************************************************************************/
-	@Test(priority=25, enabled=true)
-	public void SubscribeShortConfirmPasswordTest() throws InterruptedException {
-		
-		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-		
-		//Enter short confirm password
-		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getShortPass());	
-
-		//Check message for Confirm Password
-		Assert.assertTrue(driver.findElement(By.id("shortPassword-autotest")).getText().contains(configFileReader.getShortPassMsg()));
-
 	}
 	
 	
 	/**************************************************************************
 	//Test for not matched password
 	**************************************************************************/
-	@Test(priority=26, enabled=true)
+	@Test(priority=25, enabled=true)
 	public void SubscribeNotMatchedPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		
-		driver.findElement(By.id("auto-subscription-password")).clear();
-		driver.findElement(By.id("auto-subscription-password")).sendKeys(configFileReader.getCorrectPassText());
+		driver.findElement(By.id("auto_password")).clear();
+		driver.findElement(By.id("auto_password")).sendKeys(configFileReader.getCorrectPassText());
 		//Enter wrong confirm password
-		driver.findElement(By.id("auto-subscription-confirmpassword")).clear();
-		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getWrongPassText());	
+		driver.findElement(By.id("auto_re-enter_pass")).clear();
+		driver.findElement(By.id("auto_re-enter_pass")).sendKeys(configFileReader.getWrongPassText());	
 
 		//Check message for Confirm Password
-		Assert.assertTrue(driver.findElement(By.id("PasswordNotMatch-autotest")).getText().contains(configFileReader.getPassNotMatchedMsg()));
+		Assert.assertTrue(driver.findElement(By.id("auto_pass_not_match")).getText().contains(configFileReader.getPassNotMatchedMsg()));
 
 	}
-	
-	
-	/**************************************************************************
-	//Test for enter country
-	**************************************************************************/
-	@Test(priority=27, enabled=true)
-	public void SubscribeEnterCountryTest() throws InterruptedException {
-		
-		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-		Select country = new Select(driver.findElement(By.id("cars")));
-		country.selectByValue("Macedonia");
-		
-	}
-	
-	
-	/**************************************************************************
-	//Test for Select Terms and Privacy check box
-	**************************************************************************/
-	@Test(priority=28, enabled=true)
-	public void SubscribeSelectTermsPrivacyCheckBoxTest() throws InterruptedException {
-		
-		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-		
-		driver.findElement(By.id("auto-subscription-terms-policy")).click();
-	}
-	
-	/**************************************************************************
-	//Test for Enter First Name
-	**************************************************************************/
-	@Test(priority=29, enabled=true)
-	public void SubscribeEnterFirstNameTest() throws InterruptedException {
-		
-		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-		
-		WebElement firstName = driver.findElement(By.id("auto_firstName"));
-		firstName.findElement(By.tagName("input")).sendKeys(configFileReader.getFirstName());
-	}
-	
-	/**************************************************************************
-	//Test for Enter Last Name
-	**************************************************************************/
-	@Test(priority=30, enabled=true)
-	public void SubscribeEnterLastNameTest() throws InterruptedException {
-		
-		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-		
-		WebElement lastName = driver.findElement(By.id("auto_lastName"));
-		lastName.findElement(By.tagName("input")).sendKeys(configFileReader.getLastName());
-	}
-	
-	
-	/**************************************************************************
-	//Test for Enter Future Date
-	**************************************************************************/
-	@Test(priority=31, enabled=true)
-	public void SubscribeFutureDateTest() throws InterruptedException {
-		
-		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-		//Enter date in future
-		driver.findElement(By.id("auto_birthDate")).clear();
-		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());
-		//Click on Register button
-		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
-		Assert.assertTrue(driver.findElement(By.id("auto_date_invalid")).getText().contains(configFileReader.getDateNotValid()));
 
+	
+	/**************************************************************************
+	//Test for Enter Name
+	**************************************************************************/
+	@Test(priority=26, enabled=true)
+	public void SubscribeEnterNameTest() throws InterruptedException {
+		
+		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+		
+		WebElement firstName = driver.findElement(By.xpath("/html/body/streann-root/div/streann-subscription/streann-second-step/div/div/div/div[2]/form/streann-custom-input[1]/input"));
+		firstName.sendKeys(configFileReader.getFirstName());
 	}
-	
-	
+
+
 	/**************************************************************************
 	//Test for subscribe already existed user
 	**************************************************************************/
-	@Test(priority=32, enabled=true)
+	@Test(priority=27, enabled=true)
 	public void SubscribeExistedUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 			
 		//Refresh the login page 
-		driver.navigate().refresh();
+		//driver.navigate().refresh();
 		
-		//Enter first name again
-		WebElement firstName = driver.findElement(By.id("auto_firstName"));
-		firstName.findElement(By.tagName("input")).sendKeys(configFileReader.getFirstName());
-		//Enter Last name again
-		WebElement lastName = driver.findElement(By.id("auto_lastName"));
-		lastName.findElement(By.tagName("input")).sendKeys(configFileReader.getLastName());
-		//Enter country
-		Select country = new Select(driver.findElement(By.id("cars")));
-		country.selectByValue("Macedonia");
-		//Enter existed mail
-		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
-		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
+		//Enter name again
+		WebElement elemName = driver.findElement(By.xpath("/html/body/streann-root/div/streann-subscription/streann-second-step/div/div/div/div[2]/form/streann-custom-input[1]/input"));
+		elemName.clear();
+		elemName.sendKeys(configFileReader.getFirstName());
+
+		WebElement elemEmail = driver.findElement(By.xpath("/html/body/streann-root/div/streann-subscription/streann-second-step/div/div/div/div[2]/form/streann-custom-input[2]/input"));
+		elemEmail.clear();
+		elemEmail.sendKeys(configFileReader.getCorrectUserText());
+		
 		//Enter good pass
-		driver.findElement(By.id("auto-subscription-password")).sendKeys(configFileReader.getCorrectPassText());
+		driver.findElement(By.id("auto_password")).clear();
+		driver.findElement(By.id("auto_password")).sendKeys(configFileReader.getCorrectPassText());
 		//Enter good confirm pass
-		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getCorrectPassText());
-		//Enter Birth date
-		driver.findElement(By.id("auto_birthDate")).clear();
-		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getCorrectDate());
-		//Select Accept Terms of use and Privacy
-		driver.findElement(By.id("auto-subscription-terms-policy")).click();
+		driver.findElement(By.id("auto_re-enter_pass")).clear();
+		driver.findElement(By.id("auto_re-enter_pass")).sendKeys(configFileReader.getCorrectPassText());
 		
 		//Click on Register button
-		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
+		driver.findElement(By.id("auto_button_subsribe")).click();
 		
 		//Check message for already existed user
 		Thread.sleep(configFileReader.getSleepTime());
@@ -618,7 +533,7 @@ public class TestsHERFLIX {
 	/**************************************************************************
 	//Test for creating new user
 	**************************************************************************/
-	@Test(priority=33, enabled=true)
+	@Test(priority=28, enabled=true)
 	public void SubscribeCreateNewUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -629,13 +544,12 @@ public class TestsHERFLIX {
 		String newUser = dtf.format(now) + configFileReader.getAutoMailExtText();
 		
 		//Set new mail
-		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
-		WebElement elemInputMail = elemEmail.findElement(By.tagName("input"));
-		elemInputMail.clear();
-		elemInputMail.sendKeys(newUser);
+		WebElement elemEmail = driver.findElement(By.xpath("/html/body/streann-root/div/streann-subscription/streann-second-step/div/div/div/div[2]/form/streann-custom-input[2]/input"));
+		elemEmail.clear();
+		elemEmail.sendKeys(newUser);
 		
 		//Click on Register button
-		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
+		driver.findElement(By.id("auto_button_subsribe")).click();
 
 		//Check is the new user logged?
 		driver.findElement(By.id("auto-login-avatar-face")).click();
