@@ -402,7 +402,8 @@ public class TestsTeletica {
 
 		//Click on "New? Sign up now..." link button
 		driver.findElement(By.id("auto-login-newSignUp2")).click();
-	
+		//driver.findElement(By.xpath("/html/body/streann-root/div/streann-login/div/div/form/button")).click();
+		
 	}
 	
 	/**************************************************************************

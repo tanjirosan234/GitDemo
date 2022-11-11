@@ -11,7 +11,6 @@ Cariflix - OK (Registration -> Login -> Forgot password)
 LEN TV - OK
 Eduflix - OK
 Titan - OK
-AmericanoMedia - OK
 Kuarzo - OK
 FamilyPlay - OK
 ThreeCommas - OK
@@ -27,10 +26,11 @@ Self Made - OK
 Europa - OK
 Herflix - OK (has a lot xpath)
 Eurovision (AllAquatics) - OK (has a lot xpath)
+AllGymnastics - OK (has a lot xpath)
 Unir - OK
+AmericanoMedia - OK (Subscriotion - works only with XPATH)
 
 NEXT
 Hadif - OK do Subscription (nov dizajn kje ima)
-AllGymnastics - 
-TVN - uste Subscribe falat poradi 2 BUGovi
+TVN - uste Subscribe falat poradi 1 BUG
 
