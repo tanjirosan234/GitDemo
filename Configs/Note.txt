@@ -29,8 +29,8 @@ Eurovision (AllAquatics) - OK (has a lot xpath)
 AllGymnastics - OK (has a lot xpath)
 Unir - OK
 AmericanoMedia - OK (Subscriotion - works only with XPATH)
+TVN - OK (only future date test is missing)
 
 NEXT
 Hadif - OK do Subscription (nov dizajn kje ima)
-TVN - uste Subscribe falat poradi 1 BUG
 
