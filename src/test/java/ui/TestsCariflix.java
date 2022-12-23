@@ -607,13 +607,42 @@ public class TestsCariflix {
 	/**************************************************************************
 	//Test for Enter Future Date
 	**************************************************************************/
-	@Test(priority=35, enabled=true)
+	@Test(priority=35, enabled=false)
 	public void SubscribeFutureDateTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+		
+		//Refresh the login page 
+		//driver.navigate().refresh();
+		//Click on first plan again
+		//driver.findElement(By.id("card-plan-autotest")).click();
+		//Click on pay-card screen continue again
+		//driver.findElement(By.id("autotest-payment-continue")).click();
+				
+		//Enter first name again
+		WebElement firstName = driver.findElement(By.id("auto_firstName"));
+		firstName.findElement(By.tagName("input")).sendKeys(configFileReader.getFirstName());
+		//Enter Last name again
+		WebElement lastName = driver.findElement(By.id("auto_lastName"));
+		lastName.findElement(By.tagName("input")).sendKeys(configFileReader.getLastName());
+		//Enter country
+		Select country = new Select(driver.findElement(By.id("cars")));
+		country.selectByValue("Macedonia");
+		//Enter existed mail
+		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
+		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
+		//Enter good pass
+		driver.findElement(By.id("auto-subscription-password")).sendKeys(configFileReader.getCorrectPassText());
+		//Enter good confirm pass
+		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getCorrectPassText());
+
 		//Enter date in future
 		driver.findElement(By.id("auto_birthDate")).clear();
-		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());
+		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());		
+		
+		//Select Accept Terms of use and Privacy
+		driver.findElement(By.id("auto-subscription-terms-policy")).click();		
+		
 		//Click on Register button
 		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
 		Assert.assertTrue(driver.findElement(By.id("auto_date_invalid")).getText().contains(configFileReader.getDateNotValid()));

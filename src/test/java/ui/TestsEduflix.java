@@ -567,33 +567,60 @@ public class TestsEduflix {
 		lastName.findElement(By.tagName("input")).sendKeys(configFileReader.getLastName());
 	}
 	
-	
-	/**************************************************************************
-	//Test for Enter Future Date
-	**************************************************************************/
-	@Test(priority=32, enabled=true)
-	public void SubscribeFutureDateTest() throws InterruptedException {
-		
-		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-		//Enter date in future
-		driver.findElement(By.id("auto_birthDate")).clear();
-		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());
-		//Click on Register button
-		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
-		Assert.assertTrue(driver.findElement(By.id("auto_date_invalid")).getText().contains(configFileReader.getDateNotValid()));
-
-	}
-	
 	/**************************************************************************
 	//Test for Enter Phone Number
 	**************************************************************************/
-	@Test(priority=33, enabled=true)
+	@Test(priority=32, enabled=true)
 	public void SubscribeEnterPhoneNumberTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		//Enter Phone
 		WebElement elemPhone = driver.findElement(By.id("auto_phone"));
 		elemPhone.findElement(By.tagName("input")).sendKeys(configFileReader.getPhoneNumber());
+	}
+	
+	/**************************************************************************
+	//Test for Enter Future Date
+	**************************************************************************/
+	@Test(priority=33, enabled=true)
+	public void SubscribeFutureDateTest() throws InterruptedException {
+		
+		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+		
+		//Refresh the login page 
+		driver.navigate().refresh();
+		
+		//Enter first name again
+		WebElement firstName = driver.findElement(By.id("auto_firstName"));
+		firstName.findElement(By.tagName("input")).sendKeys(configFileReader.getFirstName());
+		//Enter Last name again
+		WebElement lastName = driver.findElement(By.id("auto_lastName"));
+		lastName.findElement(By.tagName("input")).sendKeys(configFileReader.getLastName());
+		//Enter Phone
+		WebElement elemPhone = driver.findElement(By.id("auto_phone"));
+		elemPhone.findElement(By.tagName("input")).sendKeys(configFileReader.getPhoneNumber());
+		//Enter country
+		Select country = new Select(driver.findElement(By.id("cars")));
+		country.selectByValue("Macedonia");
+		//Enter existed mail
+		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
+		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
+		//Enter good pass
+		driver.findElement(By.id("auto-subscription-password")).sendKeys(configFileReader.getCorrectPassText());
+		//Enter good confirm pass
+		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getCorrectPassText());
+
+		//Enter date in future
+		driver.findElement(By.id("auto_birthDate")).clear();
+		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());
+		
+		//Select Accept Terms of use and Privacy
+		driver.findElement(By.id("auto-subscription-terms-policy")).click();
+		
+		//Click on Register button
+		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
+		Assert.assertTrue(driver.findElement(By.id("auto_date_invalid")).getText().contains(configFileReader.getDateNotValid()));
+
 	}
 	
 	

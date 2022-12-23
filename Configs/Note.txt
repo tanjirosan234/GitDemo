@@ -4,15 +4,16 @@ RidersTV - (otkazana e RidersTV - obsolete)
 Talking Wealth - (otkazan - obsolete)
 TvTel (CDO+) - (otkazan - obsolete)
 SVG - (login so nadvoresni SSO strani)
+Self Made - otkazana
 
 NANOVO
 Panam - OK
-Cariflix - OK (Registration -> Login -> Forgot password)
+Cariflix - OK (Registration -> Login -> Forgot password - without future date test)
 LEN TV - OK
 Eduflix - OK
 Titan - OK
 Kuarzo - OK
-FamilyPlay - OK
+FamilyPlay - OK  (without subscribe tests because anti both system)
 ThreeCommas - OK
 Hekaya(Arab Telemedia) - OK
 Tuvvo - OK
@@ -22,12 +23,11 @@ WIPR - OK
 Teletica (TDMAX) - OK
 Bethel - OK
 Bethel Media - OK
-Self Made - OK
 Europa - OK
 Herflix - OK (has a lot xpath)
 Eurovision (AllAquatics) - OK (has a lot xpath)
 AllGymnastics - OK (has a lot xpath)
-Unir - OK
+Unir - OK ???
 AmericanoMedia - OK (Subscriotion - works only with XPATH)
 TVN - OK (only future date test is missing)
 

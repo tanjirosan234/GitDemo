@@ -429,7 +429,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for subscribe all empty fields
 	**************************************************************************/
-	@Test(priority=24, enabled=true)
+	@Test(priority=24, enabled=false)
 	public void SubscribeEmptyFieldsTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -461,7 +461,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for subscribe bad formated mail
 	**************************************************************************/
-	@Test(priority=25, enabled=true)
+	@Test(priority=25, enabled=false)
 	public void SubscribeBadFormatedMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -481,7 +481,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for short password
 	**************************************************************************/
-	@Test(priority=26, enabled=true)
+	@Test(priority=26, enabled=false)
 	public void SubscribeShortPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -499,7 +499,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for short confirm password
 	**************************************************************************/
-	@Test(priority=27, enabled=true)
+	@Test(priority=27, enabled=false)
 	public void SubscribeShortConfirmPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -515,7 +515,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for not matched password
 	**************************************************************************/
-	@Test(priority=28, enabled=true)
+	@Test(priority=28, enabled=false)
 	public void SubscribeNotMatchedPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -535,7 +535,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for enter country
 	**************************************************************************/
-	@Test(priority=29, enabled=true)
+	@Test(priority=29, enabled=false)
 	public void SubscribeEnterCountryTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -547,7 +547,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for Select Terms and Privacy check box
 	**************************************************************************/
-	@Test(priority=30, enabled=true)
+	@Test(priority=30, enabled=false)
 	public void SubscribeSelectTermsPrivacyCheckBoxTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -558,7 +558,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for Enter First Name
 	**************************************************************************/
-	@Test(priority=31, enabled=true)
+	@Test(priority=31, enabled=false)
 	public void SubscribeEnterFirstNameTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -570,7 +570,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for Enter Last Name
 	**************************************************************************/
-	@Test(priority=32, enabled=true)
+	@Test(priority=32, enabled=false)
 	public void SubscribeEnterLastNameTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -582,7 +582,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for Enter City
 	**************************************************************************/
-	@Test(priority=33, enabled=true)
+	@Test(priority=33, enabled=false)
 	public void SubscribeEnterCityTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -596,7 +596,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for Enter Future Date
 	**************************************************************************/
-	@Test(priority=34, enabled=true)
+	@Test(priority=34, enabled=false)
 	public void SubscribeFutureDateTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -641,7 +641,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for subscribe already existed user
 	**************************************************************************/
-	@Test(priority=35, enabled=true)
+	@Test(priority=35, enabled=false)
 	public void SubscribeExistedUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -687,7 +687,7 @@ public class TestsFamilyPlay {
 	/**************************************************************************
 	//Test for creating new user
 	**************************************************************************/
-	@Test(priority=36, enabled=true)
+	@Test(priority=36, enabled=false)
 	public void SubscribeCreateNewUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);

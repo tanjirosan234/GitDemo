@@ -171,10 +171,10 @@ public class TestsWIPR {
 	public void MyAccountTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		//Refresh the login page 
-		//sdriver.navigate().refresh();
+		driver.navigate().refresh();
 		
 		//Open My Account page
-		//driver.findElement(By.id("auto-login-avatar-face")).click();
+		driver.findElement(By.id("auto-login-avatar-face")).click();
 		driver.findElement(By.id("auto-MyAcc")).click();
 		
 		//Check Account name
@@ -367,13 +367,13 @@ public class TestsWIPR {
 		//Click on button Subscribe
 		driver.findElement(By.id("subscribeNow-autotest")).click();
 		//Accept popup
-		driver.findElement(By.xpath("/html/body/ngb-modal-window/div/div/streann-confirm-dialog/div/div[3]/button[1]")).click();
+		//driver.findElement(By.xpath("/html/body/ngb-modal-window/div/div/streann-confirm-dialog/div/div[3]/button[1]")).click();
 		//Click on Go back button
 		driver.navigate().back();
 		//Click again on Forgot password link button
 		driver.findElement(By.id("subscribeNow-autotest")).click();
 		//Accept popup again
-		driver.findElement(By.xpath("/html/body/ngb-modal-window/div/div/streann-confirm-dialog/div/div[3]/button[1]")).click();
+		//driver.findElement(By.xpath("/html/body/ngb-modal-window/div/div/streann-confirm-dialog/div/div[3]/button[1]")).click();
 	}
 	
 	
@@ -384,7 +384,8 @@ public class TestsWIPR {
 	public void CheckSubscribeFieldsTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
-			
+		driver.navigate().refresh();
+		
 		//Check first name
 		driver.findElement(By.id("auto_firstName"));
 		//Check last name
@@ -571,6 +572,21 @@ public class TestsWIPR {
 	public void SubscribeFutureDateTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+
+		//Refresh the login page 
+		driver.navigate().refresh();
+		//Accept popup again
+		//driver.findElement(By.xpath("/html/body/ngb-modal-window/div/div/streann-confirm-dialog/div/div[3]/button[1]")).click();
+				
+		//Enter first name again
+		WebElement firstName = driver.findElement(By.id("auto_firstName"));
+		firstName.findElement(By.tagName("input")).sendKeys(configFileReader.getFirstName());
+		//Enter Last name again
+		WebElement lastName = driver.findElement(By.id("auto_lastName"));
+		lastName.findElement(By.tagName("input")).sendKeys(configFileReader.getLastName());
+		//Enter country
+		Select country = new Select(driver.findElement(By.id("cars")));
+		country.selectByValue("Macedonia");
 		//Enter existed mail
 		WebElement elemEmail = driver.findElement(By.id("auto-subscription-email"));
 		elemEmail.findElement(By.tagName("input")).sendKeys(configFileReader.getCorrectUserText());
@@ -578,10 +594,15 @@ public class TestsWIPR {
 		driver.findElement(By.id("auto-subscription-password")).sendKeys(configFileReader.getCorrectPassText());
 		//Enter good confirm pass
 		driver.findElement(By.id("auto-subscription-confirmpassword")).sendKeys(configFileReader.getCorrectPassText());
-		
+
 		//Enter date in future
 		driver.findElement(By.id("auto_birthDate")).clear();
 		driver.findElement(By.id("auto_birthDate")).sendKeys(configFileReader.getFutureDate());
+		
+		//Select Accept Terms of use and Privacy
+		driver.findElement(By.id("auto-subscription-terms-policy")).click();
+		
+
 		//Click on Register button
 		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
 		AssertJUnit.assertTrue(driver.findElement(By.id("auto_date_invalid")).getText().contains(configFileReader.getDateNotValid()));
@@ -601,7 +622,7 @@ public class TestsWIPR {
 		//Refresh the login page 
 		driver.navigate().refresh();
 		//Accept popup again
-		driver.findElement(By.xpath("/html/body/ngb-modal-window/div/div/streann-confirm-dialog/div/div[3]/button[1]")).click();
+		//driver.findElement(By.xpath("/html/body/ngb-modal-window/div/div/streann-confirm-dialog/div/div[3]/button[1]")).click();
 				
 		//Enter first name again
 		WebElement firstName = driver.findElement(By.id("auto_firstName"));
