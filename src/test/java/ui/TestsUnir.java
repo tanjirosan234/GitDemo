@@ -169,9 +169,8 @@ public class TestsUnir {
 	public void MyAccountTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		//Refresh the login page 
-		driver.navigate().refresh();
-		
-		//Open My Account page
+		//driver.navigate().refresh();
+		Thread.sleep(configFileReader.getSleepTime());		//Open My Account page
 		//driver.findElement(By.id("auto-login-avatar-face")).click();
 		driver.findElement(By.xpath("/html/body/streann-root/div/streann-custome-nav/nav/div/ul[3]/li[20]/a")).click();
 		//driver.findElement(By.id("auto-login-myAcc")).click();
@@ -251,12 +250,12 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for checking start Forgot Password Test
 	**************************************************************************/
-	@Test(priority=11, enabled=false)
+	@Test(priority=11, enabled=true)
 	public void StartForgotPasswordTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 		
 		//Click on login
-		driver.findElement(By.id("auto-btn-login")).click();
+		driver.findElement(By.xpath("/html/body/streann-root/div/streann-custome-nav/nav/div/ul[3]/li[20]/a")).click();
 		
 		//Click on Forgot password link button
 		driver.findElement(By.id("auto-login-forgotPassword")).click();
@@ -271,7 +270,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for checking sending empty mail
 	**************************************************************************/	
-	@Test(priority=12, enabled=false)
+	@Test(priority=12, enabled=true)
 	public void EmptyMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -292,7 +291,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for checking sending wrong format of mail
 	**************************************************************************/	
-	@Test(priority=13, enabled=false)
+	@Test(priority=13, enabled=true)
 	public void WrongFormatMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -314,7 +313,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for checking sending not existing of mail
 	**************************************************************************/
-	@Test(priority=14, enabled=false)
+	@Test(priority=14, enabled=true)
 	public void NotExistingMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -340,7 +339,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for checking Cancel button
 	**************************************************************************/
-	@Test(priority=15, enabled=false)
+	@Test(priority=15, enabled=true)
 	public void CancelButtonTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -360,20 +359,20 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for starting subscribe from Subscribe button
 	**************************************************************************/
-	@Test(priority=20, enabled=false)
+	@Test(priority=20, enabled=true)
 	public void SubscribeButtonTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 			
 		//Click on login
-		driver.findElement(By.id("auto-test-subscribeButtonTop")).click();
+		driver.findElement(By.id("subscribeNow-autotest")).click();
 	
 	}
 	
 	/**************************************************************************
 	//Test for button Cancel
 	**************************************************************************/
-	@Test(priority=21, enabled=false)
+	@Test(priority=21, enabled=true)
 	public void SubscribeCancelTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -387,26 +386,25 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for starting subscribe
 	**************************************************************************/
-	@Test(priority=22, enabled=false)
+	@Test(priority=22, enabled=true)
 	public void InitialSubscribeTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
 			
 		//Click on login
-		driver.findElement(By.id("auto-btn-login")).click();
+		driver.findElement(By.xpath("/html/body/streann-root/div/streann-custome-nav/nav/div/ul[3]/li[20]/a")).click();
 
 		//Click on "New? Sign up now..." link button
 		//driver.findElement(By.id("auto-login-newSignUp2")).click();
-		
-		//Click on login again
-		driver.findElement(By.id("auto-test-subscribeButtonTop")).click();
+		//Click on Subscribe button again
+		driver.findElement(By.id("subscribeNow-autotest")).click();
 	
 	}
 	
 	/**************************************************************************
 	//Test for check all fields in subscribe page
 	**************************************************************************/
-	@Test(priority=23, enabled=false)
+	@Test(priority=23, enabled=true)
 	public void CheckSubscribeFieldsTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -439,7 +437,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for subscribe all empty fields
 	**************************************************************************/
-	@Test(priority=24, enabled=false)
+	@Test(priority=24, enabled=true)
 	public void SubscribeEmptyFieldsTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -470,7 +468,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for subscribe bad formated mail
 	**************************************************************************/
-	@Test(priority=25, enabled=false)
+	@Test(priority=25, enabled=true)
 	public void SubscribeBadFormatedMailTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -490,7 +488,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for short password
 	**************************************************************************/
-	@Test(priority=26, enabled=false)
+	@Test(priority=26, enabled=true)
 	public void SubscribeShortPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -508,7 +506,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for short confirm password
 	**************************************************************************/
-	@Test(priority=27, enabled=false)
+	@Test(priority=27, enabled=true)
 	public void SubscribeShortConfirmPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -525,7 +523,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for not matched password
 	**************************************************************************/
-	@Test(priority=28, enabled=false)
+	@Test(priority=28, enabled=true)
 	public void SubscribeNotMatchedPasswordTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -545,7 +543,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for enter country
 	**************************************************************************/
-	@Test(priority=29, enabled=false)
+	@Test(priority=29, enabled=true)
 	public void SubscribeEnterCountryTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -558,7 +556,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for Select Terms and Privacy check box
 	**************************************************************************/
-	@Test(priority=30, enabled=false)
+	@Test(priority=30, enabled=true)
 	public void SubscribeSelectTermsPrivacyCheckBoxTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -569,7 +567,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for Enter First Name
 	**************************************************************************/
-	@Test(priority=31, enabled=false)
+	@Test(priority=31, enabled=true)
 	public void SubscribeEnterFirstNameTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -581,7 +579,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for Enter Last Name
 	**************************************************************************/
-	@Test(priority=32, enabled=false)
+	@Test(priority=32, enabled=true)
 	public void SubscribeEnterLastNameTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -594,7 +592,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for Enter Future Date
 	**************************************************************************/
-	@Test(priority=33, enabled=false)
+	@Test(priority=33, enabled=true)
 	public void SubscribeFutureDateTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -634,7 +632,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for subscribe already existed user
 	**************************************************************************/
-	@Test(priority=34, enabled=false)
+	@Test(priority=34, enabled=true)
 	public void SubscribeExistedUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -677,7 +675,7 @@ public class TestsUnir {
 	/**************************************************************************
 	//Test for creating new user
 	**************************************************************************/
-	@Test(priority=35, enabled=false)
+	@Test(priority=35, enabled=true)
 	public void SubscribeCreateNewUserTest() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
@@ -697,8 +695,8 @@ public class TestsUnir {
 		driver.findElement(By.id("auto-subscription-subscribe-button")).click();
 
 		//Check is the new user logged?
-		driver.findElement(By.id("auto-login-avatar-face")).click();
-		Assert.assertEquals(driver.findElement(By.id("auto-login-logout")).getText(), configFileReader.getLogoutText());
+		//driver.findElement(By.id("auto-login-avatar-face")).click();
+		//Assert.assertEquals(driver.findElement(By.id("auto-login-logout")).getText(), configFileReader.getLogoutText());
 		
 	}
 	
