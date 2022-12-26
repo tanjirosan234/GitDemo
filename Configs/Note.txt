@@ -27,7 +27,7 @@ Europa - OK
 Herflix - OK (has a lot xpath)
 Eurovision (AllAquatics) - OK (has a lot xpath)
 AllGymnastics - OK (has a lot xpath)
-Unir - OK ???
+Unir - OK
 AmericanoMedia - OK (Subscriotion - works only with XPATH)
 TVN - OK (only future date test is missing)
 
