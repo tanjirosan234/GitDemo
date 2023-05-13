@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,12 +21,11 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>testng-customsuite.xml</span>
+                    <span>C:\Users\mitei\AppData\Local\Temp\testng-eclipse-1712580338\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">27 methods,   27 passed</span>
+                    <span class="method-stats">30 methods, 2 failed,   28 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="EmptyMailPasswordLoginTest">EmptyMailPasswordLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="EmptyPasswordLoginTest">EmptyPasswordLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,137 +122,142 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="CancelButtonTest">CancelButtonTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="CancelButtonTest">CancelButtonTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="CheckSubscribeFieldsTest">CheckSubscribeFieldsTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="CheckSubscribeFieldsTest">CheckSubscribeFieldsTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="EmptyLoginTest">EmptyLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="CorrectUserWrongPasswordLoginTest">CorrectUserWrongPasswordLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="EmptyMailTest">EmptyMailTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="EmptyMailLoginTest">EmptyMailLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="InitialSubscribeTest">InitialSubscribeTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="EmptyMailTest">EmptyMailTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="LogoutTest">LogoutTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="LogoutTest">LogoutTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="MyAccountTest">MyAccountTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="MyAccountTest">MyAccountTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="NotExistingMailTest">NotExistingMailTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="NotExistingMailTest">NotExistingMailTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="StartForgotPasswordTest">StartForgotPasswordTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="StartForgotPasswordTest">StartForgotPasswordTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="StartLoginTest">StartLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="StartLoginTest">StartLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeBadFormatedMailTest">SubscribeBadFormatedMailTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeBadFormatedMailTest">SubscribeBadFormatedMailTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeButtonTest">SubscribeButtonTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeButtonTest">SubscribeButtonTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeCancelTest">SubscribeCancelTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeCreateNewUserTest">SubscribeCreateNewUserTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeCreateNewUserTest">SubscribeCreateNewUserTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeEmptyFieldsTest">SubscribeEmptyFieldsTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeEmptyFieldsTest">SubscribeEmptyFieldsTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeEnterCountryTest">SubscribeEnterCountryTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeEnterCountryTest">SubscribeEnterCountryTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeEnterFirstNameTest">SubscribeEnterFirstNameTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeEnterFirstNameTest">SubscribeEnterFirstNameTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeEnterLastNameTest">SubscribeEnterLastNameTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeEnterLastNameTest">SubscribeEnterLastNameTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeExistedUserTest">SubscribeExistedUserTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeExistedUserTest">SubscribeExistedUserTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeFavoriteSportTest">SubscribeFavoriteSportTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeFutureDateTest">SubscribeFutureDateTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeFutureDateTest">SubscribeFutureDateTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeNotMatchedPasswordTest">SubscribeNotMatchedPasswordTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeNotMatchedPasswordTest">SubscribeNotMatchedPasswordTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeSelectTermsPrivacyCheckBoxTest">SubscribeSelectTermsPrivacyCheckBoxTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeSelectTermsPrivacyCheckBoxTest">SubscribeSelectTermsPrivacyCheckBoxTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeShortConfirmPasswordTest">SubscribeShortConfirmPasswordTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeShortConfirmPasswordTest">SubscribeShortConfirmPasswordTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SubscribeShortPasswordTest">SubscribeShortPasswordTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SubscribeShortPasswordTest">SubscribeShortPasswordTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="SuccessfulLoginTest">SuccessfulLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="SuccessfulLoginTest">SuccessfulLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="WrongFormatMailTest">WrongFormatMailTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="WrongFormatMailTest">WrongFormatMailTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsUnir" class="method navigator-link" hash-for-method="WrongLoginTest">WrongLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="WrongUserCorrectPasswordLoginTest">WrongUserCorrectPasswordLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ui.TestsPanam" class="method navigator-link" hash-for-method="WrongUserWrongPasswordLoginTest">WrongUserWrongPasswordLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -249,10 +272,144 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">ui.TestsPanam</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="EmptyMailPasswordLoginTest">
+                  </a> <!-- EmptyMailPasswordLoginTest -->
+                  <span class="method-name">EmptyMailPasswordLoginTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#auto_pass_required&quot;}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-21OK3DV&apos;, ip: &apos;192.168.1.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eef58338661ce2023a9cd23cb01370a0, findElement {using=id, value=auto_pass_required}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\mitei\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53484}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53484/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eef58338661ce2023a9cd23cb01370a0
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at ui.TestsPanam.EmptyMailPasswordLoginTest(TestsPanam.java:169)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="EmptyPasswordLoginTest">
+                  </a> <!-- EmptyPasswordLoginTest -->
+                  <span class="method-name">EmptyPasswordLoginTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#auto_pass_required&quot;}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-21OK3DV&apos;, ip: &apos;192.168.1.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eef58338661ce2023a9cd23cb01370a0, findElement {using=id, value=auto_pass_required}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\mitei\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53484}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53484/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eef58338661ce2023a9cd23cb01370a0
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at ui.TestsPanam.EmptyPasswordLoginTest(TestsPanam.java:144)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">ui.TestsUnir</span>
+              <span class="class-name">ui.TestsPanam</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -271,9 +428,16 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="EmptyLoginTest">
-                  </a> <!-- EmptyLoginTest -->
-                  <span class="method-name">EmptyLoginTest</span>
+                  <a name="CorrectUserWrongPasswordLoginTest">
+                  </a> <!-- CorrectUserWrongPasswordLoginTest -->
+                  <span class="method-name">CorrectUserWrongPasswordLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="EmptyMailLoginTest">
+                  </a> <!-- EmptyMailLoginTest -->
+                  <span class="method-name">EmptyMailLoginTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -281,13 +445,6 @@
                   <a name="EmptyMailTest">
                   </a> <!-- EmptyMailTest -->
                   <span class="method-name">EmptyMailTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InitialSubscribeTest">
-                  </a> <!-- InitialSubscribeTest -->
-                  <span class="method-name">InitialSubscribeTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -341,13 +498,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="SubscribeCancelTest">
-                  </a> <!-- SubscribeCancelTest -->
-                  <span class="method-name">SubscribeCancelTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="SubscribeCreateNewUserTest">
                   </a> <!-- SubscribeCreateNewUserTest -->
                   <span class="method-name">SubscribeCreateNewUserTest</span>
@@ -386,6 +536,13 @@
                   <a name="SubscribeExistedUserTest">
                   </a> <!-- SubscribeExistedUserTest -->
                   <span class="method-name">SubscribeExistedUserTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SubscribeFavoriteSportTest">
+                  </a> <!-- SubscribeFavoriteSportTest -->
+                  <span class="method-name">SubscribeFavoriteSportTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -439,9 +596,16 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="WrongLoginTest">
-                  </a> <!-- WrongLoginTest -->
-                  <span class="method-name">WrongLoginTest</span>
+                  <a name="WrongUserCorrectPasswordLoginTest">
+                  </a> <!-- WrongUserCorrectPasswordLoginTest -->
+                  <span class="method-name">WrongUserCorrectPasswordLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="WrongUserWrongPasswordLoginTest">
+                  </a> <!-- WrongUserWrongPasswordLoginTest -->
+                  <span class="method-name">WrongUserWrongPasswordLoginTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -449,7 +613,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/5q/b40p0g4154l1jxm4xgryyh900000gn/T/testng-eclipse--2113823646/testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\mitei\AppData\Local\Temp\testng-eclipse-1712580338\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -458,7 +622,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;ui.TestsUnir&quot;/&gt;
+      &lt;class name=&quot;ui.TestsPanam&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -498,120 +662,132 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(27);
+data.addRows(30);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'MyAccountTest')
-data.setCell(0, 2, 'ui.TestsUnir')
-data.setCell(0, 3, 6185);
+data.setCell(0, 1, 'EmptyPasswordLoginTest')
+data.setCell(0, 2, 'ui.TestsPanam')
+data.setCell(0, 3, 11659);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'WrongLoginTest')
-data.setCell(1, 2, 'ui.TestsUnir')
-data.setCell(1, 3, 5580);
+data.setCell(1, 1, 'EmptyMailPasswordLoginTest')
+data.setCell(1, 2, 'ui.TestsPanam')
+data.setCell(1, 3, 10683);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'SubscribeExistedUserTest')
-data.setCell(2, 2, 'ui.TestsUnir')
-data.setCell(2, 3, 5127);
+data.setCell(2, 1, 'SubscribeButtonTest')
+data.setCell(2, 2, 'ui.TestsPanam')
+data.setCell(2, 3, 6218);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'NotExistingMailTest')
-data.setCell(3, 2, 'ui.TestsUnir')
-data.setCell(3, 3, 3306);
+data.setCell(3, 1, 'SubscribeExistedUserTest')
+data.setCell(3, 2, 'ui.TestsPanam')
+data.setCell(3, 3, 4261);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'SubscribeCancelTest')
-data.setCell(4, 2, 'ui.TestsUnir')
-data.setCell(4, 3, 3099);
+data.setCell(4, 1, 'WrongUserCorrectPasswordLoginTest')
+data.setCell(4, 2, 'ui.TestsPanam')
+data.setCell(4, 3, 3771);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'SubscribeFutureDateTest')
-data.setCell(5, 2, 'ui.TestsUnir')
-data.setCell(5, 3, 2312);
+data.setCell(5, 1, 'CorrectUserWrongPasswordLoginTest')
+data.setCell(5, 2, 'ui.TestsPanam')
+data.setCell(5, 3, 3751);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'SuccessfulLoginTest')
-data.setCell(6, 2, 'ui.TestsUnir')
-data.setCell(6, 3, 1249);
+data.setCell(6, 1, 'WrongUserWrongPasswordLoginTest')
+data.setCell(6, 2, 'ui.TestsPanam')
+data.setCell(6, 3, 3750);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'StartLoginTest')
-data.setCell(7, 2, 'ui.TestsUnir')
-data.setCell(7, 3, 841);
+data.setCell(7, 1, 'MyAccountTest')
+data.setCell(7, 2, 'ui.TestsPanam')
+data.setCell(7, 3, 3604);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'StartForgotPasswordTest')
-data.setCell(8, 2, 'ui.TestsUnir')
-data.setCell(8, 3, 829);
+data.setCell(8, 1, 'NotExistingMailTest')
+data.setCell(8, 2, 'ui.TestsPanam')
+data.setCell(8, 3, 3161);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'SubscribeButtonTest')
-data.setCell(9, 2, 'ui.TestsUnir')
-data.setCell(9, 3, 439);
+data.setCell(9, 1, 'LogoutTest')
+data.setCell(9, 2, 'ui.TestsPanam')
+data.setCell(9, 3, 2986);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'SubscribeNotMatchedPasswordTest')
-data.setCell(10, 2, 'ui.TestsUnir')
-data.setCell(10, 3, 358);
+data.setCell(10, 1, 'SubscribeFutureDateTest')
+data.setCell(10, 2, 'ui.TestsPanam')
+data.setCell(10, 3, 1595);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'SubscribeCreateNewUserTest')
-data.setCell(11, 2, 'ui.TestsUnir')
-data.setCell(11, 3, 331);
+data.setCell(11, 1, 'SuccessfulLoginTest')
+data.setCell(11, 2, 'ui.TestsPanam')
+data.setCell(11, 3, 1476);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'EmptyLoginTest')
-data.setCell(12, 2, 'ui.TestsUnir')
-data.setCell(12, 3, 293);
+data.setCell(12, 1, 'StartLoginTest')
+data.setCell(12, 2, 'ui.TestsPanam')
+data.setCell(12, 3, 1417);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'SubscribeEmptyFieldsTest')
-data.setCell(13, 2, 'ui.TestsUnir')
-data.setCell(13, 3, 289);
+data.setCell(13, 1, 'StartForgotPasswordTest')
+data.setCell(13, 2, 'ui.TestsPanam')
+data.setCell(13, 3, 831);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'InitialSubscribeTest')
-data.setCell(14, 2, 'ui.TestsUnir')
-data.setCell(14, 3, 269);
+data.setCell(14, 1, 'SubscribeNotMatchedPasswordTest')
+data.setCell(14, 2, 'ui.TestsPanam')
+data.setCell(14, 3, 212);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'WrongFormatMailTest')
-data.setCell(15, 2, 'ui.TestsUnir')
-data.setCell(15, 3, 249);
+data.setCell(15, 1, 'EmptyMailLoginTest')
+data.setCell(15, 2, 'ui.TestsPanam')
+data.setCell(15, 3, 194);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'LogoutTest')
-data.setCell(16, 2, 'ui.TestsUnir')
-data.setCell(16, 3, 224);
+data.setCell(16, 1, 'SubscribeEmptyFieldsTest')
+data.setCell(16, 2, 'ui.TestsPanam')
+data.setCell(16, 3, 180);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'EmptyMailTest')
-data.setCell(17, 2, 'ui.TestsUnir')
-data.setCell(17, 3, 189);
+data.setCell(17, 1, 'SubscribeCreateNewUserTest')
+data.setCell(17, 2, 'ui.TestsPanam')
+data.setCell(17, 3, 153);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'CheckSubscribeFieldsTest')
-data.setCell(18, 2, 'ui.TestsUnir')
-data.setCell(18, 3, 171);
+data.setCell(18, 1, 'EmptyMailTest')
+data.setCell(18, 2, 'ui.TestsPanam')
+data.setCell(18, 3, 107);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'SubscribeShortPasswordTest')
-data.setCell(19, 2, 'ui.TestsUnir')
-data.setCell(19, 3, 167);
+data.setCell(19, 1, 'WrongFormatMailTest')
+data.setCell(19, 2, 'ui.TestsPanam')
+data.setCell(19, 3, 102);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'SubscribeEnterFirstNameTest')
-data.setCell(20, 2, 'ui.TestsUnir')
-data.setCell(20, 3, 164);
+data.setCell(20, 1, 'CheckSubscribeFieldsTest')
+data.setCell(20, 2, 'ui.TestsPanam')
+data.setCell(20, 3, 96);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'SubscribeEnterLastNameTest')
-data.setCell(21, 2, 'ui.TestsUnir')
-data.setCell(21, 3, 156);
+data.setCell(21, 1, 'SubscribeShortPasswordTest')
+data.setCell(21, 2, 'ui.TestsPanam')
+data.setCell(21, 3, 90);
 data.setCell(22, 0, 22)
 data.setCell(22, 1, 'SubscribeBadFormatedMailTest')
-data.setCell(22, 2, 'ui.TestsUnir')
-data.setCell(22, 3, 155);
+data.setCell(22, 2, 'ui.TestsPanam')
+data.setCell(22, 3, 81);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'SubscribeShortConfirmPasswordTest')
-data.setCell(23, 2, 'ui.TestsUnir')
-data.setCell(23, 3, 136);
+data.setCell(23, 1, 'SubscribeEnterCountryTest')
+data.setCell(23, 2, 'ui.TestsPanam')
+data.setCell(23, 3, 74);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'SubscribeEnterCountryTest')
-data.setCell(24, 2, 'ui.TestsUnir')
-data.setCell(24, 3, 135);
+data.setCell(24, 1, 'SubscribeShortConfirmPasswordTest')
+data.setCell(24, 2, 'ui.TestsPanam')
+data.setCell(24, 3, 74);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'CancelButtonTest')
-data.setCell(25, 2, 'ui.TestsUnir')
-data.setCell(25, 3, 131);
+data.setCell(25, 1, 'SubscribeEnterFirstNameTest')
+data.setCell(25, 2, 'ui.TestsPanam')
+data.setCell(25, 3, 69);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'SubscribeSelectTermsPrivacyCheckBoxTest')
-data.setCell(26, 2, 'ui.TestsUnir')
-data.setCell(26, 3, 85);
+data.setCell(26, 1, 'SubscribeEnterLastNameTest')
+data.setCell(26, 2, 'ui.TestsPanam')
+data.setCell(26, 3, 65);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'SubscribeFavoriteSportTest')
+data.setCell(27, 2, 'ui.TestsPanam')
+data.setCell(27, 3, 64);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'CancelButtonTest')
+data.setCell(28, 2, 'ui.TestsPanam')
+data.setCell(28, 3, 59);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'SubscribeSelectTermsPrivacyCheckBoxTest')
+data.setCell(29, 2, 'ui.TestsPanam')
+data.setCell(29, 3, 36);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -626,12 +802,14 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">ui.TestsUnir</span>
+              <span class="ignored-class-name">ui.TestsPanam</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">SuccessfulGoogleLoginTest</span>
+                <br/>
                 <span class="ignored-method-name">SuccessfulFacebookLoginTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
@@ -644,122 +822,138 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">ui.TestsUnir</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">ui.TestsPanam</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">Prerequisites</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">StartLoginTest</span>
-                <span class="method-start">11019 ms</span>
+                <span class="method-start">13815 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">EmptyLoginTest</span>
-                <span class="method-start">11868 ms</span>
+                <span class="method-name">EmptyMailLoginTest</span>
+                <span class="method-start">15236 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">WrongLoginTest</span>
-                <span class="method-start">12163 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">EmptyPasswordLoginTest</span>
+                <span class="method-start">15431 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">EmptyMailPasswordLoginTest</span>
+                <span class="method-start">27093 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">WrongUserCorrectPasswordLoginTest</span>
+                <span class="method-start">37777 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CorrectUserWrongPasswordLoginTest</span>
+                <span class="method-start">41549 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">WrongUserWrongPasswordLoginTest</span>
+                <span class="method-start">45302 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SuccessfulLoginTest</span>
-                <span class="method-start">17745 ms</span>
+                <span class="method-start">49053 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">MyAccountTest</span>
-                <span class="method-start">18997 ms</span>
+                <span class="method-start">50530 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">LogoutTest</span>
-                <span class="method-start">25185 ms</span>
+                <span class="method-start">54135 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">StartForgotPasswordTest</span>
-                <span class="method-start">25414 ms</span>
+                <span class="method-start">57122 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">EmptyMailTest</span>
-                <span class="method-start">26246 ms</span>
+                <span class="method-start">57954 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">WrongFormatMailTest</span>
-                <span class="method-start">26437 ms</span>
+                <span class="method-start">58063 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">NotExistingMailTest</span>
-                <span class="method-start">26688 ms</span>
+                <span class="method-start">58166 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">CancelButtonTest</span>
-                <span class="method-start">29996 ms</span>
+                <span class="method-start">61328 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeButtonTest</span>
-                <span class="method-start">30129 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SubscribeCancelTest</span>
-                <span class="method-start">30570 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InitialSubscribeTest</span>
-                <span class="method-start">33672 ms</span>
+                <span class="method-start">61388 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">CheckSubscribeFieldsTest</span>
-                <span class="method-start">33943 ms</span>
+                <span class="method-start">67607 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeEmptyFieldsTest</span>
-                <span class="method-start">34115 ms</span>
+                <span class="method-start">67704 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeBadFormatedMailTest</span>
-                <span class="method-start">34405 ms</span>
+                <span class="method-start">67885 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeShortPasswordTest</span>
-                <span class="method-start">34561 ms</span>
+                <span class="method-start">67967 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeShortConfirmPasswordTest</span>
-                <span class="method-start">34729 ms</span>
+                <span class="method-start">68059 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeNotMatchedPasswordTest</span>
-                <span class="method-start">34867 ms</span>
+                <span class="method-start">68134 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeEnterCountryTest</span>
-                <span class="method-start">35226 ms</span>
+                <span class="method-start">68347 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SubscribeFavoriteSportTest</span>
+                <span class="method-start">68421 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeSelectTermsPrivacyCheckBoxTest</span>
-                <span class="method-start">35363 ms</span>
+                <span class="method-start">68486 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeEnterFirstNameTest</span>
-                <span class="method-start">35450 ms</span>
+                <span class="method-start">68523 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeEnterLastNameTest</span>
-                <span class="method-start">35617 ms</span>
+                <span class="method-start">68593 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeFutureDateTest</span>
-                <span class="method-start">35774 ms</span>
+                <span class="method-start">68659 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeExistedUserTest</span>
-                <span class="method-start">38088 ms</span>
+                <span class="method-start">70255 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SubscribeCreateNewUserTest</span>
-                <span class="method-start">43216 ms</span>
+                <span class="method-start">74518 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">Finilize</span>
-                <span class="method-start">43549 ms</span>
+                <span class="method-start">74672 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
